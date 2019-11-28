@@ -38,12 +38,12 @@
             this.linkLabelHelp = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelSignup = new System.Windows.Forms.Panel();
-            this.labelsignup = new System.Windows.Forms.Label();
             this.textBoxconfirmpass = new System.Windows.Forms.TextBox();
             this.textBoxpass = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.labelsignup = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonGuestlogin = new System.Windows.Forms.Button();
             this.textBoxEmailGuest = new System.Windows.Forms.TextBox();
@@ -71,6 +71,8 @@
             this.buttonCancel.TabIndex = 1;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.buttonCancel.MouseHover += new System.EventHandler(this.buttonCancel_MouseHover);
             // 
             // labelUserName
             // 
@@ -145,7 +147,6 @@
             // 
             this.panelSignup.AutoScroll = true;
             this.panelSignup.BackColor = System.Drawing.Color.Coral;
-            this.panelSignup.Controls.Add(this.labelsignup);
             this.panelSignup.Controls.Add(this.textBoxconfirmpass);
             this.panelSignup.Controls.Add(this.textBoxpass);
             this.panelSignup.Controls.Add(this.textBoxEmail);
@@ -153,17 +154,9 @@
             this.panelSignup.Controls.Add(this.textBoxFirstName);
             this.panelSignup.Location = new System.Drawing.Point(12, 340);
             this.panelSignup.Name = "panelSignup";
-            this.panelSignup.Size = new System.Drawing.Size(198, 240);
+            this.panelSignup.Size = new System.Drawing.Size(198, 166);
             this.panelSignup.TabIndex = 8;
-            // 
-            // labelsignup
-            // 
-            this.labelsignup.Image = ((System.Drawing.Image)(resources.GetObject("labelsignup.Image")));
-            this.labelsignup.Location = new System.Drawing.Point(28, 177);
-            this.labelsignup.Name = "labelsignup";
-            this.labelsignup.Size = new System.Drawing.Size(138, 53);
-            this.labelsignup.TabIndex = 9;
-            this.labelsignup.Click += new System.EventHandler(this.labelsignup_Click);
+            this.panelSignup.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSignup_Paint);
             // 
             // textBoxconfirmpass
             // 
@@ -241,6 +234,15 @@
             this.textBoxFirstName.UseWaitCursor = true;
             this.textBoxFirstName.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
+            // labelsignup
+            // 
+            this.labelsignup.Image = ((System.Drawing.Image)(resources.GetObject("labelsignup.Image")));
+            this.labelsignup.Location = new System.Drawing.Point(33, 539);
+            this.labelsignup.Name = "labelsignup";
+            this.labelsignup.Size = new System.Drawing.Size(138, 53);
+            this.labelsignup.TabIndex = 9;
+            this.labelsignup.Click += new System.EventHandler(this.labelsignup_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Firebrick;
@@ -286,6 +288,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1272, 610);
+            this.Controls.Add(this.labelsignup);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelSignup);
             this.Controls.Add(this.label1);

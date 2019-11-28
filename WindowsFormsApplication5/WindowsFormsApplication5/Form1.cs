@@ -28,6 +28,7 @@ namespace WindowsFormsApplication5
             LinkLabel.Link link = new LinkLabel.Link();
             link.LinkData = @"Z:\WindowsFormsApplication5\WindowsFormsApplication5\HelpPage.html";
             linkLabelHelp.Links.Add(link);
+            panelSignup.Visible = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -73,6 +74,7 @@ namespace WindowsFormsApplication5
 
         private void labelsignup_Click(object sender, EventArgs e)
         {
+            panelSignup.Visible=true;
         }
 
         private void textBoxEmailGuest_TextChanged(object sender, EventArgs e)
@@ -84,6 +86,22 @@ namespace WindowsFormsApplication5
         {
             Form2 open = new Form2();
             open.Show();            
+        }
+
+        private void panelSignup_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("It Will terminate The Form");
+
+        }
+
+        private void buttonCancel_MouseHover(object sender, EventArgs e)
+        {
+            
         }
     }
 }

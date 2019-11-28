@@ -15,17 +15,24 @@ namespace WindowsFormsApplication5
         public Form2()
         {
             InitializeComponent();
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
             Form1 close = new Form1();
             close.Close();
+            PanelSample.Visible = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void labelSample_Click(object sender, EventArgs e)
+        {
+            PanelSample.Visible = true;
         }
     }
 }
