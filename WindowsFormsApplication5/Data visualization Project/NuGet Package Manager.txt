@@ -1,0 +1,4 @@
+FusionCharts.Visualization
+Live Charts
+SyncFusion.Gauge.Windows
+Scott Plot
