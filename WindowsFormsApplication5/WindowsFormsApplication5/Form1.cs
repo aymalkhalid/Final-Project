@@ -26,8 +26,9 @@ namespace WindowsFormsApplication5
         private void Form1_Load(object sender, EventArgs e)
         {
             LinkLabel.Link link = new LinkLabel.Link();
-            link.LinkData = @"Z:\WindowsFormsApplication5\WindowsFormsApplication5\HelpPage.html";
-            linkLabelHelp.Links.Add(link);           
+            link.LinkData = @"Z:\WindowsFormsApplication5\Html_HelpPages\HelpPage.html";
+            linkLabelHelp.Links.Add(link);   
+                    
         }
         string text = @"Z:\WindowsFormsApplication5\WindowsFormsApplication5\SignUpfile.txt";
         private void textBox1_TextChanged(object sender, EventArgs e)
