@@ -1,0 +1,5 @@
+Z:\WindowsFormsApplication5\MyClassLibraries\Filing\Filing\bin\Debug\Filing.dll
+Z:\WindowsFormsApplication5\MyClassLibraries\Filing\Filing\bin\Debug\Filing.pdb
+Z:\WindowsFormsApplication5\MyClassLibraries\Filing\Filing\obj\Debug\Filing.csprojResolveAssemblyReference.cache
+Z:\WindowsFormsApplication5\MyClassLibraries\Filing\Filing\obj\Debug\Filing.dll
+Z:\WindowsFormsApplication5\MyClassLibraries\Filing\Filing\obj\Debug\Filing.pdb
