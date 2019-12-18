@@ -8,7 +8,7 @@ namespace Filing
 {
     public class Writing
     {
-        public void WriteLinesGuestLoginIn(string path, string[] guestloginIN)
+        public void writeLinesGuestLoginIn(string path, string[] guestloginIN)
         {
             using (StreamWriter outputFile = new StreamWriter(path, true))
             {
@@ -17,7 +17,17 @@ namespace Filing
                     outputFile.WriteLine(item);
                 }
             }
-
+        }
+            public void writeLinesUserLoginIn(string path, string[] userLoginIn)
+        {
+            using (StreamWriter outputFile = new StreamWriter(path, true))
+            {
+                foreach (string item in userLoginIn)
+                {
+                    outputFile.WriteLine(item);
+                    //1 + 2;
+                }
+            }
         }
     }
 }

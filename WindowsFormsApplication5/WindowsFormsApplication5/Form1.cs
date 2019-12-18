@@ -12,8 +12,12 @@ namespace WindowsFormsApplication5
         {
             InitializeComponent();
         }        
-        string guestLogin = @"Z:\WindowsFormsApplication5\'Start Data Visualization' Form Files\GuestLoginIn.txt";
-        Writing loginWriting = new Writing();
+        string guestLoginPath = @"Z:\WindowsFormsApplication5\'Start Data Visualization' Form Files\GuestLogin.txt";
+        string signInPath= @"Z:\WindowsFormsApplication5\'Start Data Visualization' Form Files\SignIn.txt";
+        string signUpPath = @"Z:\WindowsFormsApplication5\'Start Data Visualization' Form Files\SignUp.txt";
+        Writing guestloginWriting = new Writing();
+        Writing signupWriting = new Writing();
+        Writing signInWriting = new Writing();
         private void linkLabelHelp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(e.Link.LinkData as string);
@@ -23,8 +27,8 @@ namespace WindowsFormsApplication5
         {
             LinkLabel.Link link = new LinkLabel.Link();
             link.LinkData = @"Z:\WindowsFormsApplication5\Html_HelpPages\HelpPage.html";
-            linkLabelHelp.Links.Add(link);
-
+            linkLabelGeneralHelp.Links.Add(link);
+            panelSignup.Visible = false;
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -67,25 +71,7 @@ namespace WindowsFormsApplication5
 
         private void labelsignup_Click(object sender, EventArgs e)
         {
-            string text = "";
-            string signUpFirstName = textBoxFirstName.Text;
-            string signUpLastName = textBoxLastName.Text;
-            string signupEmail = textBoxEmail.Text;
-            string signUpPassword = textBoxpass.Text;
-            string signUpConfirmPassword = textBoxconfirmpass.Text;
-            string[] signedUser = { signUpFirstName, signUpLastName, signupEmail, signUpPassword };
-            if (signUpConfirmPassword == signUpPassword)
-            {
-                using (StreamWriter outputFile = new StreamWriter(text, true))
-                {
-                    foreach (string item in signedUser)
-                    {
-                        outputFile.WriteLine(item);
-                    }
-                }
-                MessageBox.Show("Congratulations On Signing Up");
-            }
-
+            
         }
 
         private void textBoxEmailGuest_TextChanged(object sender, EventArgs e)
@@ -95,8 +81,10 @@ namespace WindowsFormsApplication5
 
         private void buttonSignin_Click(object sender, EventArgs e)
         {
-            string text = "";
-            string[] readingFile = File.ReadAllLines(text, Encoding.UTF8);
+            string userName = textBoxUserName.Text;
+            string password = textBoxPassword.Text;
+            string[] sign_In = { userName, password };
+            
             //foreach (string item in readingFile)
             //{
             //    if (textBoxUserName.Text == item && textBoxPassword.Text == item + 3 )
@@ -116,7 +104,7 @@ namespace WindowsFormsApplication5
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("It Will terminate The Form");
+            
 
         }
 
@@ -160,13 +148,13 @@ namespace WindowsFormsApplication5
                 {
                     var addr = new System.Net.Mail.MailAddress(guestEmail);
                     string check = addr.Address;
-                    label1.Text = check;
-                    if (check == guestEmail)
+                    
+                    if (check == guestEmail && guestEmail != "Email")
                     {
                         guestEmail.ToLower();
                         string date = DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’");
                         string[] guestLoginArray = { guestEmail,date};
-                        loginWriting.WriteLinesGuestLoginIn(guestLogin, guestLoginArray);
+                        guestloginWriting.writeLinesGuestLoginIn(guestLoginPath, guestLoginArray);
                         
                     }                   
                 }
@@ -185,6 +173,74 @@ namespace WindowsFormsApplication5
                 }
 
             
+        }
+
+        private void pictureBoxSignUp_Click(object sender, EventArgs e)
+        {
+            panelSignup.Visible = true;
+            pictureBoxSignUp.Visible = false;
+        }
+
+        private void pictureBoxExit_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            string message = "Do you want to close this window?";
+            string title = "Close Window";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Visible = true;
+            }
+        }
+
+        private void SignUpButton_Click(object sender, EventArgs e)
+        {
+            if (textBoxFirstName.Text != null && textBoxLastName.Text !=null && textBoxEmail !=null && textBoxpass !=null && textBoxconfirmpass !=null)
+            {
+                if (textBoxpass.Text == textBoxconfirmpass.Text)
+                {
+                    string checkFName = textBoxFirstName.Text;
+                    string checkLName = textBoxLastName.Text;
+                    string[] checkNames = { checkFName, checkLName };
+                    foreach (string item in checkNames)
+                    {
+                        for (int i = 0; i < item.Length; i++)
+                        {
+
+                        }
+
+                    }
+                    try
+                    {
+                        string fName = textBoxFirstName.Text;
+                        string lName = textBoxLastName.Text;
+                        string email = textBoxEmail.Text;
+                        string password = textBoxpass.Text;
+                        string confirmPass = textBoxconfirmpass.Text;
+                        string[] signUp = { fName, lName, email, password, confirmPass };
+                        signupWriting.writeLinesUserLoginIn(signUpPath, signUp);
+                    }
+                    catch (Exception e)
+                    {
+
+                        throw;
+                    }
+                }             
+          }
+            else
+            {
+
+            }
+
+        } // functionEnd
+            
+            }
+
         }
     }
 }

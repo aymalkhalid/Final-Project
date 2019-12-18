@@ -28,81 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start_Data_Visualization));
             this.buttonSignin = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.labelUserName = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.linkLabelHelp = new System.Windows.Forms.LinkLabel();
+            this.linkLabelGeneralHelp = new System.Windows.Forms.LinkLabel();
             this.panelSignup = new System.Windows.Forms.Panel();
+            this.SignUpButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelConfirmpass = new System.Windows.Forms.Label();
             this.labelpass = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelLN = new System.Windows.Forms.Label();
             this.labelFN = new System.Windows.Forms.Label();
-            this.labelsignup = new System.Windows.Forms.Label();
             this.textBoxconfirmpass = new System.Windows.Forms.TextBox();
             this.textBoxpass = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelGuestLogin = new System.Windows.Forms.Panel();
             this.buttonGuestlogin = new System.Windows.Forms.Button();
             this.textBoxEmailGuest = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSignin = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxSignUp = new System.Windows.Forms.PictureBox();
+            this.pictureBoxExit = new System.Windows.Forms.PictureBox();
+            this.errorProviderSignUp = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelSignup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelGuestLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelSignin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSignUp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderSignUp)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSignin
             // 
+            this.buttonSignin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSignin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonSignin.Location = new System.Drawing.Point(103, 131);
+            this.buttonSignin.Location = new System.Drawing.Point(201, 131);
             this.buttonSignin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonSignin.Name = "buttonSignin";
-            this.buttonSignin.Size = new System.Drawing.Size(112, 48);
+            this.buttonSignin.Size = new System.Drawing.Size(130, 49);
             this.buttonSignin.TabIndex = 0;
             this.buttonSignin.Text = "Sign In";
             this.buttonSignin.UseVisualStyleBackColor = true;
             this.buttonSignin.Click += new System.EventHandler(this.buttonSignin_Click);
             // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonCancel.Location = new System.Drawing.Point(321, 131);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(124, 48);
-            this.buttonCancel.TabIndex = 1;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            this.buttonCancel.MouseHover += new System.EventHandler(this.buttonCancel_MouseHover);
-            // 
             // labelUserName
             // 
             this.labelUserName.AutoSize = true;
             this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.labelUserName.Location = new System.Drawing.Point(25, 20);
+            this.labelUserName.Location = new System.Drawing.Point(16, 20);
             this.labelUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(149, 32);
+            this.labelUserName.Size = new System.Drawing.Size(156, 32);
             this.labelUserName.TabIndex = 2;
-            this.labelUserName.Text = "UserName";
+            this.labelUserName.Text = "User Name";
             // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.labelPassword.Location = new System.Drawing.Point(25, 68);
+            this.labelPassword.Location = new System.Drawing.Point(16, 69);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(139, 32);
@@ -111,6 +104,7 @@
             // 
             // textBoxUserName
             // 
+            this.textBoxUserName.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxUserName.Location = new System.Drawing.Point(192, 27);
             this.textBoxUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxUserName.Name = "textBoxUserName";
@@ -120,6 +114,7 @@
             // 
             // textBoxPassword
             // 
+            this.textBoxPassword.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxPassword.Location = new System.Drawing.Point(192, 75);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPassword.Name = "textBoxPassword";
@@ -128,41 +123,54 @@
             this.textBoxPassword.TabIndex = 5;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
-            // linkLabelHelp
+            // linkLabelGeneralHelp
             // 
-            this.linkLabelHelp.AutoSize = true;
-            this.linkLabelHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.linkLabelHelp.Location = new System.Drawing.Point(223, 143);
-            this.linkLabelHelp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabelHelp.Name = "linkLabelHelp";
-            this.linkLabelHelp.Size = new System.Drawing.Size(69, 26);
-            this.linkLabelHelp.TabIndex = 6;
-            this.linkLabelHelp.TabStop = true;
-            this.linkLabelHelp.Text = "Help?";
-            this.linkLabelHelp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelHelp_LinkClicked);
+            this.linkLabelGeneralHelp.AutoSize = true;
+            this.linkLabelGeneralHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.linkLabelGeneralHelp.Location = new System.Drawing.Point(431, 143);
+            this.linkLabelGeneralHelp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabelGeneralHelp.Name = "linkLabelGeneralHelp";
+            this.linkLabelGeneralHelp.Size = new System.Drawing.Size(69, 26);
+            this.linkLabelGeneralHelp.TabIndex = 6;
+            this.linkLabelGeneralHelp.TabStop = true;
+            this.linkLabelGeneralHelp.Text = "Help?";
+            this.linkLabelGeneralHelp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelHelp_LinkClicked);
             // 
             // panelSignup
             // 
             this.panelSignup.AutoScroll = true;
             this.panelSignup.BackColor = System.Drawing.Color.LightGray;
+            this.panelSignup.Controls.Add(this.SignUpButton);
             this.panelSignup.Controls.Add(this.pictureBox1);
             this.panelSignup.Controls.Add(this.labelConfirmpass);
             this.panelSignup.Controls.Add(this.labelpass);
             this.panelSignup.Controls.Add(this.labelEmail);
             this.panelSignup.Controls.Add(this.labelLN);
             this.panelSignup.Controls.Add(this.labelFN);
-            this.panelSignup.Controls.Add(this.labelsignup);
             this.panelSignup.Controls.Add(this.textBoxconfirmpass);
             this.panelSignup.Controls.Add(this.textBoxpass);
             this.panelSignup.Controls.Add(this.textBoxEmail);
             this.panelSignup.Controls.Add(this.textBoxLastName);
             this.panelSignup.Controls.Add(this.textBoxFirstName);
-            this.panelSignup.Location = new System.Drawing.Point(648, 449);
+            this.panelSignup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelSignup.Location = new System.Drawing.Point(1118, 429);
             this.panelSignup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelSignup.Name = "panelSignup";
-            this.panelSignup.Size = new System.Drawing.Size(1247, 475);
+            this.panelSignup.Size = new System.Drawing.Size(778, 485);
             this.panelSignup.TabIndex = 8;
+            this.panelSignup.Visible = false;
             this.panelSignup.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSignup_Paint);
+            // 
+            // SignUpButton
+            // 
+            this.SignUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.SignUpButton.Location = new System.Drawing.Point(320, 314);
+            this.SignUpButton.Name = "SignUpButton";
+            this.SignUpButton.Size = new System.Drawing.Size(186, 49);
+            this.SignUpButton.TabIndex = 19;
+            this.SignUpButton.Text = "Sign up !";
+            this.SignUpButton.UseVisualStyleBackColor = true;
+            this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
             // pictureBox1
             // 
@@ -175,7 +183,7 @@
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(852, 49);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 256);
+            this.pictureBox1.Size = new System.Drawing.Size(346, 256);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
@@ -231,23 +239,11 @@
             this.labelFN.TabIndex = 12;
             this.labelFN.Text = "First Name";
             // 
-            // labelsignup
-            // 
-            this.labelsignup.BackColor = System.Drawing.SystemColors.Control;
-            this.labelsignup.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelsignup.Image = ((System.Drawing.Image)(resources.GetObject("labelsignup.Image")));
-            this.labelsignup.Location = new System.Drawing.Point(396, 319);
-            this.labelsignup.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelsignup.Name = "labelsignup";
-            this.labelsignup.Size = new System.Drawing.Size(193, 58);
-            this.labelsignup.TabIndex = 9;
-            this.labelsignup.Click += new System.EventHandler(this.labelsignup_Click);
-            // 
             // textBoxconfirmpass
             // 
             this.textBoxconfirmpass.AcceptsReturn = true;
             this.textBoxconfirmpass.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBoxconfirmpass.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.textBoxconfirmpass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxconfirmpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxconfirmpass.ForeColor = System.Drawing.Color.Black;
             this.textBoxconfirmpass.Location = new System.Drawing.Point(320, 253);
@@ -256,14 +252,13 @@
             this.textBoxconfirmpass.PasswordChar = '*';
             this.textBoxconfirmpass.Size = new System.Drawing.Size(341, 35);
             this.textBoxconfirmpass.TabIndex = 11;
-            this.textBoxconfirmpass.UseWaitCursor = true;
             this.textBoxconfirmpass.TextChanged += new System.EventHandler(this.textBoxconfirmpass_TextChanged);
             // 
             // textBoxpass
             // 
             this.textBoxpass.AcceptsReturn = true;
             this.textBoxpass.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBoxpass.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.textBoxpass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxpass.ForeColor = System.Drawing.Color.Black;
             this.textBoxpass.Location = new System.Drawing.Point(320, 208);
@@ -272,14 +267,13 @@
             this.textBoxpass.PasswordChar = '*';
             this.textBoxpass.Size = new System.Drawing.Size(341, 35);
             this.textBoxpass.TabIndex = 10;
-            this.textBoxpass.UseWaitCursor = true;
             this.textBoxpass.TextChanged += new System.EventHandler(this.textBoxpass_TextChanged);
             // 
             // textBoxEmail
             // 
             this.textBoxEmail.AcceptsReturn = true;
             this.textBoxEmail.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBoxEmail.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.textBoxEmail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxEmail.ForeColor = System.Drawing.Color.Black;
             this.textBoxEmail.Location = new System.Drawing.Point(320, 153);
@@ -288,14 +282,13 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(341, 35);
             this.textBoxEmail.TabIndex = 10;
-            this.textBoxEmail.UseWaitCursor = true;
             this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
             // textBoxLastName
             // 
             this.textBoxLastName.AcceptsReturn = true;
             this.textBoxLastName.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBoxLastName.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.textBoxLastName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxLastName.ForeColor = System.Drawing.Color.Black;
             this.textBoxLastName.Location = new System.Drawing.Point(320, 102);
@@ -303,14 +296,13 @@
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(341, 35);
             this.textBoxLastName.TabIndex = 1;
-            this.textBoxLastName.UseWaitCursor = true;
             this.textBoxLastName.TextChanged += new System.EventHandler(this.textBoxLastName_TextChanged);
             // 
             // textBoxFirstName
             // 
             this.textBoxFirstName.AcceptsReturn = true;
             this.textBoxFirstName.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBoxFirstName.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.textBoxFirstName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxFirstName.ForeColor = System.Drawing.Color.Black;
             this.textBoxFirstName.Location = new System.Drawing.Point(320, 55);
@@ -318,26 +310,26 @@
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(341, 35);
             this.textBoxFirstName.TabIndex = 0;
-            this.textBoxFirstName.UseWaitCursor = true;
             this.textBoxFirstName.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
-            // panel1
+            // panelGuestLogin
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.buttonGuestlogin);
-            this.panel1.Controls.Add(this.textBoxEmailGuest);
-            this.panel1.Location = new System.Drawing.Point(73, 464);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(324, 125);
-            this.panel1.TabIndex = 9;
+            this.panelGuestLogin.BackColor = System.Drawing.Color.LightGray;
+            this.panelGuestLogin.Controls.Add(this.buttonGuestlogin);
+            this.panelGuestLogin.Controls.Add(this.textBoxEmailGuest);
+            this.panelGuestLogin.Location = new System.Drawing.Point(91, 449);
+            this.panelGuestLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelGuestLogin.Name = "panelGuestLogin";
+            this.panelGuestLogin.Size = new System.Drawing.Size(527, 151);
+            this.panelGuestLogin.TabIndex = 9;
             // 
             // buttonGuestlogin
             // 
             this.buttonGuestlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonGuestlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGuestlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.buttonGuestlogin.ForeColor = System.Drawing.Color.MediumBlue;
-            this.buttonGuestlogin.Location = new System.Drawing.Point(57, 64);
+            this.buttonGuestlogin.Location = new System.Drawing.Point(72, 64);
             this.buttonGuestlogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonGuestlogin.Name = "buttonGuestlogin";
             this.buttonGuestlogin.Size = new System.Drawing.Size(205, 56);
@@ -382,34 +374,55 @@
             this.panelSignin.BackColor = System.Drawing.Color.LightGray;
             this.panelSignin.Controls.Add(this.labelUserName);
             this.panelSignin.Controls.Add(this.buttonSignin);
-            this.panelSignin.Controls.Add(this.buttonCancel);
             this.panelSignin.Controls.Add(this.labelPassword);
-            this.panelSignin.Controls.Add(this.linkLabelHelp);
+            this.panelSignin.Controls.Add(this.linkLabelGeneralHelp);
             this.panelSignin.Controls.Add(this.textBoxUserName);
             this.panelSignin.Controls.Add(this.textBoxPassword);
-            this.panelSignin.Location = new System.Drawing.Point(27, 702);
+            this.panelSignin.Location = new System.Drawing.Point(91, 682);
             this.panelSignin.Name = "panelSignin";
             this.panelSignin.Size = new System.Drawing.Size(527, 205);
             this.panelSignin.TabIndex = 11;
             // 
-            // label1
+            // pictureBoxSignUp
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(121, 633);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "label1";
+            this.pictureBoxSignUp.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBoxSignUp.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSignUp.Image")));
+            this.pictureBoxSignUp.Location = new System.Drawing.Point(670, 458);
+            this.pictureBoxSignUp.Name = "pictureBoxSignUp";
+            this.pictureBoxSignUp.Size = new System.Drawing.Size(402, 142);
+            this.pictureBoxSignUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxSignUp.TabIndex = 12;
+            this.pictureBoxSignUp.TabStop = false;
+            this.pictureBoxSignUp.Click += new System.EventHandler(this.pictureBoxSignUp_Click);
+            // 
+            // pictureBoxExit
+            // 
+            this.pictureBoxExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxExit.BackgroundImage")));
+            this.pictureBoxExit.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxExit.Image")));
+            this.pictureBoxExit.Location = new System.Drawing.Point(688, 750);
+            this.pictureBoxExit.Name = "pictureBoxExit";
+            this.pictureBoxExit.Size = new System.Drawing.Size(235, 137);
+            this.pictureBoxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxExit.TabIndex = 13;
+            this.pictureBoxExit.TabStop = false;
+            this.pictureBoxExit.Click += new System.EventHandler(this.pictureBoxExit_Click);
+            // 
+            // errorProviderSignUp
+            // 
+            this.errorProviderSignUp.BlinkRate = 200;
+            this.errorProviderSignUp.ContainerControl = this;
             // 
             // Start_Data_Visualization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1908, 938);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBoxExit);
+            this.Controls.Add(this.pictureBoxSignUp);
             this.Controls.Add(this.panelSignin);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelGuestLogin);
             this.Controls.Add(this.panelSignup);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -421,33 +434,33 @@
             this.panelSignup.ResumeLayout(false);
             this.panelSignup.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelGuestLogin.ResumeLayout(false);
+            this.panelGuestLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelSignin.ResumeLayout(false);
             this.panelSignin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSignUp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderSignUp)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button buttonSignin;
-        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.TextBox textBoxUserName;
         private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.LinkLabel linkLabelHelp;
+        private System.Windows.Forms.LinkLabel linkLabelGeneralHelp;
         private System.Windows.Forms.Panel panelSignup;
         private System.Windows.Forms.TextBox textBoxFirstName;
         private System.Windows.Forms.TextBox textBoxpass;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.TextBox textBoxconfirmpass;
-        private System.Windows.Forms.Label labelsignup;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelGuestLogin;
         private System.Windows.Forms.Button buttonGuestlogin;
         private System.Windows.Forms.TextBox textBoxEmailGuest;
         private System.Windows.Forms.Label labelpass;
@@ -458,7 +471,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelSignin;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBoxSignUp;
+        private System.Windows.Forms.PictureBox pictureBoxExit;
+        private System.Windows.Forms.Button SignUpButton;
+        private System.Windows.Forms.ErrorProvider errorProviderSignUp;
     }
 }
 

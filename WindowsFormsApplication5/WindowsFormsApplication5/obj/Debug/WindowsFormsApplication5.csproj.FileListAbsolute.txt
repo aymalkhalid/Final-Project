@@ -1,11 +1,3 @@
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csprojResolveAssemblyReference.cache
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\Interop.AdHocReportingExcelClientLib.dll
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csproj.ResolveComReference.cache
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Connection.resources
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Properties.Resources.resources
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.TextFile_WorkBook_Form.resources
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Excel_WorkBook_Form.resources
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csproj.GenerateResource.Cache
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.exe.config
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.exe
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.pdb
@@ -13,6 +5,7 @@ Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\DocumentFormat.Op
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ExcelDataReader.DataSet.dll
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ExcelDataReader.dll
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ExcelNumberFormat.dll
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\Filing.dll
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\LiveCharts.dll
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\LiveCharts.Geared.dll
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\LiveCharts.WinForms.dll
@@ -24,6 +17,7 @@ Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ExcelDataReader.x
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ExcelDataReader.DataSet.pdb
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ExcelDataReader.DataSet.xml
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ExcelNumberFormat.xml
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\Filing.pdb
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\LiveCharts.pdb
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\LiveCharts.xml
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\LiveCharts.WinForms.pdb
@@ -31,9 +25,13 @@ Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\LiveCharts.WinFor
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\LiveCharts.Wpf.pdb
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\LiveCharts.Wpf.xml
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\Newtonsoft.Json.xml
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\Interop.AdHocReportingExcelClientLib.dll
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csproj.ResolveComReference.cache
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Connection.resources
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Start_Data_Visualization.resources
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Properties.Resources.resources
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.TextFile_WorkBook_Form.resources
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Excel_WorkBook_Form.resources
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csproj.GenerateResource.Cache
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.exe
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.pdb
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Start_Data_Visualization.resources
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\Checking_Library.pdb
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\Filing.dll
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\Filing.pdb
