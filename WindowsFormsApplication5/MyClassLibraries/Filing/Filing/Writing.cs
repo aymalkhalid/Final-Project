@@ -29,5 +29,14 @@ namespace Filing
                 }
             }
         }
+        public static bool IsAllLettersOrDigits(string input)
+        {
+            foreach (char c in input)
+            {
+                if (!char.IsLetterOrDigit(c))
+                    return false;
+            }
+            return true;
+        }
     }
 }

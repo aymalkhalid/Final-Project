@@ -37,6 +37,9 @@
     <Reference Include="Checking_Library">
       <HintPath>..\MyClassLibraries\Checking_Library\Checking_Library\bin\Debug\Checking_Library.dll</HintPath>
     </Reference>
+    <Reference Include="Checks">
+      <HintPath>..\MyClassLibraries\Checks\Checks\bin\Debug\Checks.dll</HintPath>
+    </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=2.9.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>..\packages\DocumentFormat.OpenXml.2.9.1\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
       <Private>True</Private>
@@ -53,8 +56,7 @@
       <HintPath>..\packages\ExcelNumberFormat.1.0.7\lib\net20\ExcelNumberFormat.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Filing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Filing">
       <HintPath>..\MyClassLibraries\Filing\Filing\bin\Debug\Filing.dll</HintPath>
     </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">

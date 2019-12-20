@@ -35,3 +35,6 @@ Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsAppli
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csproj.GenerateResource.Cache
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.exe
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.pdb
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csprojResolveAssemblyReference.cache
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\Checks.dll
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\Checks.pdb

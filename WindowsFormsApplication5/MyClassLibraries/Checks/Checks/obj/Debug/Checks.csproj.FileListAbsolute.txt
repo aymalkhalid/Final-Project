@@ -1,0 +1,4 @@
+Z:\WindowsFormsApplication5\MyClassLibraries\Checks\Checks\bin\Debug\Checks.dll
+Z:\WindowsFormsApplication5\MyClassLibraries\Checks\Checks\bin\Debug\Checks.pdb
+Z:\WindowsFormsApplication5\MyClassLibraries\Checks\Checks\obj\Debug\Checks.dll
+Z:\WindowsFormsApplication5\MyClassLibraries\Checks\Checks\obj\Debug\Checks.pdb
