@@ -6,6 +6,9 @@ using System.IO;
 using System.Text.RegularExpressions;
 using Filing;
 using Checks;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace WindowsFormsApplication5
 {
     public partial class Start_Data_Visualization : Form
@@ -21,7 +24,13 @@ namespace WindowsFormsApplication5
         Writing objSignupWriting = new Writing();
         Writing objSignInWriting = new Writing();
         checkString objcheckNames = new checkString();
-        bool flagNames = false;
+        string passwordRetrived = "";
+        string emailRetrived = "";
+        bool fNFlag = false;
+        bool lNFlag = false;
+        bool passwordFlag = false;
+        bool confirmPasswordFlag = false;
+        bool emailflag = false;
         bool[] validationFlag = new bool[4];
         bool writeflag = false;
         private void linkLabelHelp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -39,12 +48,12 @@ namespace WindowsFormsApplication5
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string registerUserName = textBoxUserName.Text;
+            string registerUserName = textBoxEmailUser.Text;
         }
 
         private void textBoxPassword_TextChanged(object sender, EventArgs e)
         {
-            string registerUserPassword = textBoxPassword.Text;
+            string registerUserPassword = textBoxPasswordUser.Text;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -84,24 +93,6 @@ namespace WindowsFormsApplication5
         private void textBoxEmailGuest_TextChanged(object sender, EventArgs e)
         {
             string guestEmail = textBoxEmailGuest.Text;
-        }
-
-        private void buttonSignin_Click(object sender, EventArgs e)
-        {
-            string userName = textBoxUserName.Text;
-            string password = textBoxPassword.Text;
-            string[] sign_In = { userName, password };
-            
-            //foreach (string item in readingFile)
-            //{
-            //    if (textBoxUserName.Text == item && textBoxPassword.Text == item + 3 )
-            //    {
-            //Form2 open = new Form2();
-            //open.Show();
-            //    }
-            //}           
-            Connection open = new Connection();
-            open.Show();
         }
 
         private void panelSignup_Paint(object sender, PaintEventArgs e)
@@ -184,8 +175,10 @@ namespace WindowsFormsApplication5
 
         private void pictureBoxSignUp_Click(object sender, EventArgs e)
         {
+            panelSignin.Visible = false;
+            panelGuestLogin.Visible = false;
             panelSignup.Visible = true;
-            pictureBoxSignUp.Visible = false;
+          //  pictureBoxSignUp.Visible = false;
         }
 
         private void pictureBoxExit_Click(object sender, EventArgs e)
@@ -209,42 +202,82 @@ namespace WindowsFormsApplication5
         {
             try
             {
-                if (validationFlag.Length == 4)
+                if (fNFlag == true && lNFlag == true && passwordFlag == true && confirmPasswordFlag == true && emailflag == true)
                 {
-                    foreach (bool item in validationFlag)
-                    {
-                        if (item == true)
-                        {
-                            writeflag = true;
-                            
-                        }
-                        else
-                        {
-                            writeflag = false;                          
-                        }
-                    }
-                    if (writeflag == false)
-                    {
-                        MessageBox.Show("Some of the Fields is empty");
-                    }
-                 
-                }               
-                if (writeflag == true)
-                {
-                            string fName = textBoxFirstName.Text;
-                            string lName = textBoxLastName.Text;
-                            string email = textBoxEmail.Text;
-                            string password = textBoxpass.Text;
-                            string confirmPass = textBoxconfirmpass.Text;
-                            string[] signUp = { fName, lName, email, password, confirmPass };
-                    objSignupWriting.writeLinesUserLoginIn(signUpPath,signUp);
-
+                    string fName = textBoxSignUpFirstName.Text;
+                    string lName = textBoxSignUPLastName.Text;
+                    string email = textBoxSignupEmail.Text.ToLower();
+                    string password = textBoxSignuppass.Text;
+                    string confirmPass = textBoxSignUpconfirmpass.Text;
+                    string[] signUp = { fName, lName, email, password, confirmPass };
+                    objSignupWriting.writeLinesUserLoginIn(signUpPath, signUp);
+                    panelSignin.Visible = true;
+                    panelSignup.Visible = false;
+                    labelStatus.Text = "Congratulations On Signing Up Press The Button Below To Sign_IN";
+                    //}
                 }
+                else 
+                {
+                    MessageBox.Show("Some Of the Fields are Empty",
+                 "Important Note",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Exclamation,
+                 MessageBoxDefaultButton.Button1);
+                }
+
+                //if (validationFlag.Length == 4)
+                //{
+                //    foreach (bool item in validationFlag)
+                //    {
+                //        if (item == true)
+                //        {
+                //            writeflag = true;
+
+                //        }
+                //        else
+                //        {
+                //            writeflag = false;                          
+                //        }
+                //    }
+                //    if (writeflag == false)
+                //    {
+                //        MessageBox.Show("Some of the Fields are empty");
+                //    }
+
+                //}               
+                //if (writeflag == true)
+                //{                                   
+                //    string[] reading = File.ReadAllLines(signUpPath, Encoding.UTF8);
+                //    //objSignInWriting.writeLinesUserLoginIn(signInPath, reading);
+                //    List<string> readingList = reading.ToList();
+                //    int indexOFEmail = 0;
+                //     foreach (string item in readingList)
+                //        {
+                //            if (item == textBoxEmailUser.Text)
+                //            {
+                //                indexOFEmail = readingList.IndexOf(textBoxSignupEmail.Text);
+                //            }
+                //        }             
+                //        emailRetrived = reading[indexOFEmail];
+                //    //if (emailRetrived == textBoxSignupEmail.Text)
+                //    //{
+                //        string fName = textBoxSignUpFirstName.Text;
+                //        string lName = textBoxSignUPLastName.Text;
+                //        string email = textBoxSignupEmail.Text.ToLower();
+                //        string password = textBoxSignuppass.Text;
+                //        string confirmPass = textBoxSignUpconfirmpass.Text;
+                //        string[] signUp = { fName, lName, email, password, confirmPass };
+                //        objSignupWriting.writeLinesUserLoginIn(signUpPath, signUp);
+                //        panelSignin.Visible = true;
+                //        panelSignup.Visible = false;
+                //        labelStatus.Text = "Congratulations On Signing Up Press The Button Below To Sign_IN";
+                //    //}
+                //}
             }
             catch (Exception error)
             {
 
-                MessageBox.Show(error.Message, "Check The Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(error.Message, "Some OF the fields are Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         } // functionEnd
@@ -261,27 +294,27 @@ namespace WindowsFormsApplication5
 
         private void textBoxFirstName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (textBoxFirstName.Text == string.Empty)
+            if (textBoxSignUpFirstName.Text == string.Empty)
             {
-                errorProvider1.SetError(textBoxFirstName, "Empty");
+                errorProvider.SetError(textBoxSignUpFirstName, "Empty");
             }
-            else if (textBoxFirstName.Text != string.Empty)
+            else if (textBoxSignUpFirstName.Text != string.Empty)
             {
-                string checkFName = textBoxFirstName.Text;
+                string checkFName = textBoxSignUpFirstName.Text;
                 foreach (char item in checkFName)
                 {
                     if (char.IsLetter(item))
                     {
-                        flagNames = true;
+                        fNFlag = true;
                     }
                 }
-                if (flagNames == false)
+                if (fNFlag == false)
                 {
-                    errorProvider1.SetError(textBoxFirstName, @"First Name Contains 'numbers or special character");
+                    errorProvider.SetError(textBoxSignUpFirstName, @"First Name Contains 'numbers or special character");
                 }
-                else if (flagNames == true)
+                else if (fNFlag == true)
                 {
-                    errorProvider2.SetError(textBoxFirstName, "Valid");
+                    ValidationProvider.SetError(textBoxSignUpFirstName, "Valid");
                     validationFlag[0] = true;
                 }
             }           
@@ -301,27 +334,27 @@ namespace WindowsFormsApplication5
         private void textBoxLastName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
-            if (textBoxLastName.Text == string.Empty)
+            if (textBoxSignUPLastName.Text == string.Empty)
             {
-                errorProvider1.SetError(textBoxLastName, "Empty");
+                errorProvider.SetError(textBoxSignUPLastName, "Empty");
             }
-            else if (textBoxLastName.Text != string.Empty)
+            else if (textBoxSignUPLastName.Text != string.Empty)
             {
-                string lastName  = textBoxLastName.Text;
+                string lastName  = textBoxSignUPLastName.Text;
                 foreach (char item in lastName)
                 {
                     if (char.IsLetter(item))
                     {
-                        flagNames = true;
+                        lNFlag = true;
                     }
                 }
-                if (flagNames == false)
+                if (lNFlag == false)
                 {
-                    errorProvider1.SetError(textBoxLastName, @"First Name Contains 'numbers or special character");
+                    errorProvider.SetError(textBoxSignUPLastName, @"First Name Contains 'numbers or special character");
                 }
-                else if (flagNames == true)
+                else if (lNFlag == true)
                 {
-                    errorProvider2.SetError(textBoxLastName, "Valid");
+                    ValidationProvider.SetError(textBoxSignUPLastName, "Valid");
                     validationFlag[1] = true;
                 }
             }            
@@ -331,17 +364,34 @@ namespace WindowsFormsApplication5
         {
             try
             {
-                var addr = new System.Net.Mail.MailAddress(textBoxEmail.ToString());
-                string check = addr.Address;
-                if (check == textBoxEmail.Text)
+                string[] reading = File.ReadAllLines(signUpPath, Encoding.UTF8);
+                //objSignInWriting.writeLinesUserLoginIn(signInPath, reading);
+                List<string> readingList = reading.ToList();
+                int indexOFEmail = 0;
+                foreach (string item in readingList)
                 {
-                    errorProvider2.SetError(textBoxEmail, "Valid");
-                    validationFlag[2] = true;
+                    if (item == textBoxSignupEmail.Text)
+                    {
+                        indexOFEmail = readingList.IndexOf(textBoxSignupEmail.Text);
+                    }
                 }
-                else if (check != textBoxEmail.Text)
+                emailRetrived = reading[indexOFEmail];
+                var addressVerification = new System.Net.Mail.MailAddress(textBoxSignupEmail.Text);
+                string check = addressVerification.Address;
+                if (check == emailRetrived)
                 {
-                    errorProvider1.SetError(textBoxEmail, "Invalid");
+                    errorProvider.SetError(textBoxSignupEmail, "Already In Use");
                 }
+               else  if (check == textBoxSignupEmail.Text)
+                {
+                    ValidationProvider.SetError(textBoxSignupEmail, "Valid");
+                   emailflag = true;
+                }
+                else if (check != textBoxSignupEmail.Text)
+                {
+                    errorProvider.SetError(textBoxSignupEmail, "Invalid");
+                }
+               
             }
             catch (Exception error)
             {
@@ -349,12 +399,13 @@ namespace WindowsFormsApplication5
 
             }
 
+
         }
         private void textBoxpass_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             bool flagLetter = false;
             bool flagDigit = false;
-            string checkpassword = textBoxpass.Text;
+            string checkpassword = textBoxSignuppass.Text;
             if (checkpassword != string.Empty)
             {
                 foreach (char item in checkpassword)
@@ -379,24 +430,24 @@ namespace WindowsFormsApplication5
             }
             else if (checkpassword == string.Empty)
             {
-                errorProvider1.SetError(textBoxpass,"Empty");
+                errorProvider.SetError(textBoxSignuppass,"Empty");
             }
             if (flagLetter == true)
             {
-                errorProvider1.SetError(textBoxpass, "Contains Only Letter");
+                errorProvider.SetError(textBoxSignuppass, "Contains Only Letter");
             }
             else if (flagDigit == true)
             {
-                errorProvider1.SetError(textBoxpass, "Contains Only Digits");
+                errorProvider.SetError(textBoxSignuppass, "Contains Only Digits");
             }
             else if (checkpassword.Length < 5)
             {
-                errorProvider1.SetError(textBoxpass, "Must Contain less than 5 characters");
+                errorProvider.SetError(textBoxSignuppass, "Must Contain less than 5 characters");
             }
             else if (checkpassword.Length > 5)
             {
-                errorProvider2.SetError(textBoxpass, "Valid");
-                validationFlag[3] = true;
+                ValidationProvider.SetError(textBoxSignuppass, "Valid");
+                passwordFlag = true;
             }
         }
 
@@ -404,7 +455,7 @@ namespace WindowsFormsApplication5
         {
             bool flagLetter = false;
             bool flagDigit = false;
-            string checkpassword = textBoxconfirmpass.Text;
+            string checkpassword = textBoxSignUpconfirmpass.Text;
             if (checkpassword != string.Empty)
             {
                 foreach (char item in checkpassword)
@@ -428,33 +479,122 @@ namespace WindowsFormsApplication5
                 }
                 if (flagLetter == true)
                 {
-                    errorProvider1.SetError(textBoxconfirmpass, "Contains Only Letter");
+                    errorProvider.SetError(textBoxSignUpconfirmpass, "Contains Only Letter");
                 }
                 else if (flagDigit == true)
                 {
-                    errorProvider1.SetError(textBoxconfirmpass, "Contains Only Digits");
+                    errorProvider.SetError(textBoxSignUpconfirmpass, "Contains Only Digits");
                 }
             }
             else if (checkpassword == string.Empty)
             {
-                errorProvider1.SetError(textBoxconfirmpass, "Empty");
+                errorProvider.SetError(textBoxSignUpconfirmpass, "Empty");
             }
          
             else if (checkpassword.Length < 5)
             {
-                errorProvider1.SetError(textBoxconfirmpass, "Must Contain More than 5 characters");
+                errorProvider.SetError(textBoxSignUpconfirmpass, "Must Contain More than 5 characters");
             }
-            if (textBoxconfirmpass.Text == textBoxPassword.Text)
+            if (textBoxSignUpconfirmpass.Text == textBoxSignuppass.Text)
             {
-                errorProvider2.SetError(textBoxconfirmpass, "Valid");
-                validationFlag[4] = true;
+                ValidationProvider.SetError(textBoxSignUpconfirmpass, "Valid");
+                confirmPasswordFlag = true;
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             panelSignin.Visible = false;
+            panelSignup.Visible = false;
             panelGuestLogin.Visible = true;
+        }
+
+        private void buttonUserSignIn_Click(object sender, EventArgs e)
+        {
+            panelSignup.Visible = false;
+            panelGuestLogin.Visible = false;
+            panelSignin.Visible = true;
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            string userName_Email = textBoxEmailUser.Text;
+            string userNamePassword = textBoxPasswordUser.Text;
+            string date = DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’");
+            string[] sign_In = { userName_Email, userNamePassword, date };
+            string[] reading = File.ReadAllLines(signUpPath, Encoding.UTF8);
+            //objSignInWriting.writeLinesUserLoginIn(signInPath, reading);
+            List<string> readingList = reading.ToList();
+            int indexOFEmail = 0;
+            try
+            {
+                foreach (string item in readingList)
+                {
+                    if (item == userName_Email)
+                    {
+                       indexOFEmail = readingList.IndexOf(userName_Email);                        
+                    }
+                }
+                int indexOFPassword = indexOFEmail + 1;
+                emailRetrived= reading[indexOFEmail];
+                passwordRetrived = reading[indexOFPassword];                
+                if (emailRetrived == userName_Email && passwordRetrived == userNamePassword)
+                {
+
+                    objSignInWriting.writeLinesUserLoginIn(signInPath, sign_In);
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Enter A Correct Email or Check PassWord", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            try
+            {                    
+                var addr = new System.Net.Mail.MailAddress(textBoxEmailUser.Text.ToString());
+                string check = addr.Address;
+                if (check == textBoxEmailUser.Text && check ==emailRetrived)
+                {
+                    ValidationProvider.SetError(textBoxEmailUser, "Valid");
+                }
+                else if (textBoxEmailUser.Text == string.Empty )
+                {
+                    errorProvider.SetError(textBoxEmailUser, "Empty");
+                }
+                else if (check != textBoxEmailUser.Text || check != emailRetrived)
+                {
+                    errorProvider.SetError(textBoxEmailUser, "Invalid");
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Enter A Correct Email ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            try
+            {
+                if (userNamePassword == passwordRetrived)
+                {
+                    ValidationProvider.SetError(textBoxPasswordUser, "Valid");
+                }
+                else if (userNamePassword != passwordRetrived)
+                {
+                    errorProvider.SetError(textBoxPasswordUser, "Invalid");
+                }
+                else if (userNamePassword == string.Empty)
+                {
+                    errorProvider.SetError(textBoxPasswordUser,"Empty");
+                }
+            }
+            catch (Exception error)
+            {
+
+                MessageBox.Show(error.Message, "Enter A Correct Email ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void panelSignin_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     }
