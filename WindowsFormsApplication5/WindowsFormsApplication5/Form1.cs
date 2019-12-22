@@ -32,7 +32,7 @@ namespace WindowsFormsApplication5
         bool confirmPasswordFlag = false;
         bool emailflag = false;
         bool[] validationFlag = new bool[4];
-        bool writeflag = false;
+        bool connectionFormFlag = false;
         private void linkLabelHelp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(e.Link.LinkData as string);
@@ -45,6 +45,7 @@ namespace WindowsFormsApplication5
             linkLabelGeneralHelp.Links.Add(link);
             panelSignup.Visible = false;
             panelGuestLogin.Visible = false;
+
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -518,78 +519,84 @@ namespace WindowsFormsApplication5
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            string userName_Email = textBoxEmailUser.Text;
-            string userNamePassword = textBoxPasswordUser.Text;
-            string date = DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’");
-            string[] sign_In = { userName_Email, userNamePassword, date };
-            string[] reading = File.ReadAllLines(signUpPath, Encoding.UTF8);
-            //objSignInWriting.writeLinesUserLoginIn(signInPath, reading);
-            List<string> readingList = reading.ToList();
-            int indexOFEmail = 0;
-            try
-            {
-                foreach (string item in readingList)
-                {
-                    if (item == userName_Email)
-                    {
-                       indexOFEmail = readingList.IndexOf(userName_Email);                        
-                    }
-                }
-                int indexOFPassword = indexOFEmail + 1;
-                emailRetrived= reading[indexOFEmail];
-                passwordRetrived = reading[indexOFPassword];                
-                if (emailRetrived == userName_Email && passwordRetrived == userNamePassword)
-                {
+            //string userName_Email = textBoxEmailUser.Text;
+            //string userNamePassword = textBoxPasswordUser.Text;
+            //string date = DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’");
+            //string[] sign_In = { userName_Email, userNamePassword, date };
+            //string[] reading = File.ReadAllLines(signUpPath, Encoding.UTF8);
+            ////objSignInWriting.writeLinesUserLoginIn(signInPath, reading);
+            //List<string> readingList = reading.ToList();
+            //int indexOFEmail = 0;
+            //try
+            //{
+            //    foreach (string item in readingList)
+            //    {
+            //        if (item == userName_Email)
+            //        {
+            //           indexOFEmail = readingList.IndexOf(userName_Email);                        
+            //        }
+            //    }
+            //    int indexOFPassword = indexOFEmail + 1;
+            //    emailRetrived= reading[indexOFEmail];
+            //    passwordRetrived = reading[indexOFPassword];                
+            //    if (emailRetrived == userName_Email && passwordRetrived == userNamePassword)
+            //    {
 
-                    objSignInWriting.writeLinesUserLoginIn(signInPath, sign_In);
-                }
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.Message, "Enter A Correct Email or Check PassWord", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            try
-            {                    
-                var addr = new System.Net.Mail.MailAddress(textBoxEmailUser.Text.ToString());
-                string check = addr.Address;
-                if (check == textBoxEmailUser.Text && check ==emailRetrived)
-                {
-                    ValidationProvider.SetError(textBoxEmailUser, "Valid");
-                }
-                else if (textBoxEmailUser.Text == string.Empty )
-                {
-                    errorProvider.SetError(textBoxEmailUser, "Empty");
-                }
-                else if (check != textBoxEmailUser.Text || check != emailRetrived)
-                {
-                    errorProvider.SetError(textBoxEmailUser, "Invalid");
-                }
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.Message, "Enter A Correct Email ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        objSignInWriting.writeLinesUserLoginIn(signInPath, sign_In);
+            //        connectionFormFlag = true;
+            //    }
+            //}
+            //catch (Exception error)
+            //{
+            //    MessageBox.Show(error.Message, "Enter A Correct Email or Check PassWord", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //try
+            //{                    
+            //    var addr = new System.Net.Mail.MailAddress(textBoxEmailUser.Text.ToString());
+            //    string check = addr.Address;
+            //    if (check == textBoxEmailUser.Text && check ==emailRetrived)
+            //    {
+            //        ValidationProvider.SetError(textBoxEmailUser, "Valid");
+            //    }
+            //    else if (textBoxEmailUser.Text == string.Empty )
+            //    {
+            //        errorProvider.SetError(textBoxEmailUser, "Empty");
+            //    }
+            //    else if (check != textBoxEmailUser.Text || check != emailRetrived)
+            //    {
+            //        errorProvider.SetError(textBoxEmailUser, "Invalid");
+            //    }
+            //}
+            //catch (Exception error)
+            //{
+            //    MessageBox.Show(error.Message, "Enter A Correct Email ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }
-            try
-            {
-                if (userNamePassword == passwordRetrived)
-                {
-                    ValidationProvider.SetError(textBoxPasswordUser, "Valid");
-                }
-                else if (userNamePassword != passwordRetrived)
-                {
-                    errorProvider.SetError(textBoxPasswordUser, "Invalid");
-                }
-                else if (userNamePassword == string.Empty)
-                {
-                    errorProvider.SetError(textBoxPasswordUser,"Empty");
-                }
-            }
-            catch (Exception error)
-            {
+            //}
+            //try
+            //{
+            //    if (userNamePassword == passwordRetrived)
+            //    {
+            //        ValidationProvider.SetError(textBoxPasswordUser, "Valid");
+            //    }
+            //    else if (userNamePassword != passwordRetrived)
+            //    {
+            //        errorProvider.SetError(textBoxPasswordUser, "Invalid");
+            //    }
+            //    else if (userNamePassword == string.Empty)
+            //    {
+            //        errorProvider.SetError(textBoxPasswordUser,"Empty");
+            //    }
+            //}
+            //catch (Exception error)
+            //{
 
-                MessageBox.Show(error.Message, "Enter A Correct Email ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //    MessageBox.Show(error.Message, "Enter A Correct Email ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //if (connectionFormFlag == true)
+            //{
+                Connection open = new Connection();
+               open.Show();
+            //}
         }
 
         private void panelSignin_Paint(object sender, PaintEventArgs e)

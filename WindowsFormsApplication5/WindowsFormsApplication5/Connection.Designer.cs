@@ -28,48 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Connection));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint19 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 10D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint20 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 10D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint21 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 11D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint22 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 12D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint23 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 13D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint24 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 14D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint25 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 15D);
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint26 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 15D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint27 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 12D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint28 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 8D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint29 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 14D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint30 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 10D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint31 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 7D);
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint32 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 20D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint33 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 20D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint34 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 20D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint35 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 20D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint36 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 15D);
-            this.PanelSample = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panelConnect = new System.Windows.Forms.Panel();
             this.linkLabelOn_Connection = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
@@ -79,210 +39,46 @@
             this.buttonExcel = new System.Windows.Forms.Button();
             this.labelFile = new System.Windows.Forms.Label();
             this.labelConnect = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.PanelSample.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxpieChartstatic = new System.Windows.Forms.PictureBox();
+            this.labelReal_Time_Charts = new System.Windows.Forms.Label();
+            this.label_Static_Charts = new System.Windows.Forms.Label();
+            this.linkLabel_Help_Real_Time_Charts = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_Help_On_Static_Charts = new System.Windows.Forms.LinkLabel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMain_Header = new System.Windows.Forms.PictureBox();
+            this.panel_Try_Grap = new System.Windows.Forms.Panel();
+            this.labelLine_Graph_ = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelpie__chartdef = new System.Windows.Forms.Label();
+            this.labelBarGraphdef = new System.Windows.Forms.Label();
+            this.pictureBoxPie = new System.Windows.Forms.PictureBox();
+            this.labelBar_Graphheading = new System.Windows.Forms.Label();
+            this.pictureBoxLine = new System.Windows.Forms.PictureBox();
+            this.pictureBoxColumn = new System.Windows.Forms.PictureBox();
+            this.labelPieChartheading = new System.Windows.Forms.Label();
+            this.labelLineGraphHeading = new System.Windows.Forms.Label();
+            this.PanelSample = new System.Windows.Forms.Panel();
+            this.textBoxUrl = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.photoList = new System.Windows.Forms.ImageList(this.components);
             this.panelConnect.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxpieChartstatic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMain_Header)).BeginInit();
+            this.panel_Try_Grap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColumn)).BeginInit();
+            this.PanelSample.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // PanelSample
-            // 
-            this.PanelSample.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(180)))), ((int)(((byte)(209)))));
-            this.PanelSample.Controls.Add(this.pictureBox1);
-            this.PanelSample.Controls.Add(this.linkLabel2);
-            this.PanelSample.Controls.Add(this.linkLabel1);
-            this.PanelSample.Controls.Add(this.label2);
-            this.PanelSample.Controls.Add(this.label1);
-            this.PanelSample.Controls.Add(this.tableLayoutPanel1);
-            this.PanelSample.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.PanelSample.Location = new System.Drawing.Point(496, 6);
-            this.PanelSample.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.PanelSample.Name = "PanelSample";
-            this.PanelSample.Size = new System.Drawing.Size(1920, 1080);
-            this.PanelSample.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(50, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1226, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.linkLabel2.Location = new System.Drawing.Point(272, 601);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(341, 32);
-            this.linkLabel2.TabIndex = 11;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Get Help On Static Charts";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(497, 105);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(255, 20);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Help On What is Realtime Charts ?";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(40)))), ((int)(((byte)(237)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.Location = new System.Drawing.Point(65, 598);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 37);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Static Charts";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(40)))), ((int)(((byte)(237)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label1.Location = new System.Drawing.Point(494, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 37);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Real Time Charts";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.chart3, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.chart1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.chart2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(57, 638);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(589, 337);
-            this.tableLayoutPanel1.TabIndex = 7;
-            // 
-            // chart3
-            // 
-            chartArea4.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart3.Legends.Add(legend4);
-            this.chart3.Location = new System.Drawing.Point(299, 6);
-            this.chart3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.chart3.Name = "chart3";
-            this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            series7.XValueMember = "1";
-            series7.YValueMembers = "10";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Legend = "Legend1";
-            series8.Name = "Series2";
-            series8.XValueMember = "2";
-            series8.YValueMembers = "20";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series9.Legend = "Legend1";
-            series9.Name = "Series3";
-            series9.XValueMember = "3";
-            series9.YValueMembers = "30";
-            this.chart3.Series.Add(series7);
-            this.chart3.Series.Add(series8);
-            this.chart3.Series.Add(series9);
-            this.chart3.Size = new System.Drawing.Size(285, 156);
-            this.chart3.TabIndex = 5;
-            this.chart3.Text = "chart3";
-            // 
-            // chart1
-            // 
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
-            this.chart1.Location = new System.Drawing.Point(5, 6);
-            this.chart1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series10.ChartArea = "ChartArea1";
-            series10.Color = System.Drawing.Color.Red;
-            series10.Legend = "Legend1";
-            series10.Name = "VpMid";
-            series10.Points.Add(dataPoint19);
-            series10.Points.Add(dataPoint20);
-            series10.Points.Add(dataPoint21);
-            series10.Points.Add(dataPoint22);
-            series10.Points.Add(dataPoint23);
-            series10.Points.Add(dataPoint24);
-            series10.Points.Add(dataPoint25);
-            series10.XValueMember = "10";
-            series10.YValueMembers = "10";
-            series11.ChartArea = "ChartArea1";
-            series11.Legend = "Legend1";
-            series11.Name = "PSMid";
-            series11.Points.Add(dataPoint26);
-            series11.Points.Add(dataPoint27);
-            series11.Points.Add(dataPoint28);
-            series11.Points.Add(dataPoint29);
-            series11.Points.Add(dataPoint30);
-            series11.Points.Add(dataPoint31);
-            this.chart1.Series.Add(series10);
-            this.chart1.Series.Add(series11);
-            this.chart1.Size = new System.Drawing.Size(284, 156);
-            this.chart1.TabIndex = 3;
-            this.chart1.Text = "Mid Term ";
-            title2.BackColor = System.Drawing.Color.BlanchedAlmond;
-            title2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            title2.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
-            title2.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Top;
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            title2.Name = "Title1";
-            title2.Text = "Random Chart";
-            this.chart1.Titles.Add(title2);
-            // 
-            // chart2
-            // 
-            chartArea6.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart2.Legends.Add(legend6);
-            this.chart2.Location = new System.Drawing.Point(5, 174);
-            this.chart2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.chart2.Name = "chart2";
-            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series12.Legend = "Legend1";
-            series12.Name = "PieChart";
-            series12.Points.Add(dataPoint32);
-            series12.Points.Add(dataPoint33);
-            series12.Points.Add(dataPoint34);
-            series12.Points.Add(dataPoint35);
-            series12.Points.Add(dataPoint36);
-            this.chart2.Series.Add(series12);
-            this.chart2.Size = new System.Drawing.Size(284, 157);
-            this.chart2.TabIndex = 4;
-            this.chart2.Text = "MyTime";
             // 
             // panelConnect
             // 
@@ -298,7 +94,7 @@
             this.panelConnect.Location = new System.Drawing.Point(14, 6);
             this.panelConnect.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.panelConnect.Name = "panelConnect";
-            this.panelConnect.Size = new System.Drawing.Size(477, 1048);
+            this.panelConnect.Size = new System.Drawing.Size(486, 954);
             this.panelConnect.TabIndex = 3;
             // 
             // linkLabelOn_Connection
@@ -306,7 +102,7 @@
             this.linkLabelOn_Connection.AutoSize = true;
             this.linkLabelOn_Connection.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.linkLabelOn_Connection.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelOn_Connection.Location = new System.Drawing.Point(0, 682);
+            this.linkLabelOn_Connection.Location = new System.Drawing.Point(3, 764);
             this.linkLabelOn_Connection.Name = "linkLabelOn_Connection";
             this.helpProvider1.SetShowHelp(this.linkLabelOn_Connection, true);
             this.linkLabelOn_Connection.Size = new System.Drawing.Size(472, 96);
@@ -321,7 +117,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label3.Location = new System.Drawing.Point(35, 295);
+            this.label3.Location = new System.Drawing.Point(17, 324);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(237, 40);
@@ -334,7 +130,7 @@
             this.labelServer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.labelServer.ForeColor = System.Drawing.Color.White;
-            this.labelServer.Location = new System.Drawing.Point(42, 478);
+            this.labelServer.Location = new System.Drawing.Point(9, 532);
             this.labelServer.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelServer.Name = "labelServer";
             this.labelServer.Size = new System.Drawing.Size(177, 42);
@@ -343,6 +139,7 @@
             // 
             // buttonDataBase
             // 
+            this.buttonDataBase.BackColor = System.Drawing.Color.LightCyan;
             this.buttonDataBase.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonDataBase.FlatAppearance.BorderSize = 2;
             this.buttonDataBase.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -351,26 +148,26 @@
             this.buttonDataBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 38F);
             this.buttonDataBase.Image = ((System.Drawing.Image)(resources.GetObject("buttonDataBase.Image")));
             this.buttonDataBase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDataBase.Location = new System.Drawing.Point(5, 529);
+            this.buttonDataBase.Location = new System.Drawing.Point(5, 597);
             this.buttonDataBase.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonDataBase.Name = "buttonDataBase";
-            this.buttonDataBase.Size = new System.Drawing.Size(467, 106);
+            this.buttonDataBase.Size = new System.Drawing.Size(481, 151);
             this.buttonDataBase.TabIndex = 3;
-            this.buttonDataBase.Text = "   DataBase";
+            this.buttonDataBase.Text = "DataBase";
             this.buttonDataBase.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDataBase.UseVisualStyleBackColor = true;
+            this.buttonDataBase.UseVisualStyleBackColor = false;
             // 
             // buttonfile
             // 
-            this.buttonfile.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.buttonfile.BackColor = System.Drawing.Color.LightCyan;
             this.buttonfile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
             this.buttonfile.Image = ((System.Drawing.Image)(resources.GetObject("buttonfile.Image")));
             this.buttonfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonfile.Location = new System.Drawing.Point(5, 350);
+            this.buttonfile.Location = new System.Drawing.Point(5, 370);
             this.buttonfile.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonfile.Name = "buttonfile";
-            this.buttonfile.Size = new System.Drawing.Size(467, 102);
+            this.buttonfile.Size = new System.Drawing.Size(481, 151);
             this.buttonfile.TabIndex = 2;
             this.buttonfile.Text = "           Text";
             this.buttonfile.UseVisualStyleBackColor = false;
@@ -379,16 +176,16 @@
             // buttonExcel
             // 
             this.buttonExcel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonExcel.BackColor = System.Drawing.Color.LightSalmon;
+            this.buttonExcel.BackColor = System.Drawing.Color.LightCyan;
             this.buttonExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.buttonExcel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.buttonExcel.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcel.Image")));
             this.buttonExcel.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.buttonExcel.Location = new System.Drawing.Point(0, 167);
+            this.buttonExcel.Location = new System.Drawing.Point(0, 126);
             this.buttonExcel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonExcel.Name = "buttonExcel";
-            this.buttonExcel.Size = new System.Drawing.Size(458, 102);
+            this.buttonExcel.Size = new System.Drawing.Size(486, 151);
             this.buttonExcel.TabIndex = 1;
             this.buttonExcel.Text = "                 Excel";
             this.buttonExcel.UseVisualStyleBackColor = false;
@@ -399,7 +196,7 @@
             this.labelFile.AutoSize = true;
             this.labelFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.labelFile.ForeColor = System.Drawing.Color.Cornsilk;
-            this.labelFile.Location = new System.Drawing.Point(35, 121);
+            this.labelFile.Location = new System.Drawing.Point(17, 80);
             this.labelFile.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelFile.Name = "labelFile";
             this.labelFile.Size = new System.Drawing.Size(255, 40);
@@ -417,35 +214,322 @@
             this.labelConnect.TabIndex = 0;
             this.labelConnect.Text = "Explore  WorkBooks";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(11)))), ((int)(((byte)(69)))));
-            this.panel3.Location = new System.Drawing.Point(1778, 6);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(118, 1018);
-            this.panel3.TabIndex = 14;
-            // 
             // helpProvider1
             // 
             this.helpProvider1.HelpNamespace = "Z:\\WindowsFormsApplication5\\Html_HelpPages\\ConnectionFormHelp.html";
             // 
-            // panel1
+            // tableLayoutPanel1
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Location = new System.Drawing.Point(499, 6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(44, 1048);
-            this.panel1.TabIndex = 14;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.13443F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 401F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.86558F));
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBoxpieChartstatic, 0, 0);
+            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(60, 640);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1081, 314);
+            this.tableLayoutPanel1.TabIndex = 7;
+            this.tableLayoutPanel1.MouseHover += new System.EventHandler(this.tableLayoutPanel1_MouseHover);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(758, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(320, 308);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 18;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(357, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(395, 308);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBoxpieChartstatic
+            // 
+            this.pictureBoxpieChartstatic.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxpieChartstatic.Image")));
+            this.pictureBoxpieChartstatic.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxpieChartstatic.Name = "pictureBoxpieChartstatic";
+            this.pictureBoxpieChartstatic.Size = new System.Drawing.Size(348, 308);
+            this.pictureBoxpieChartstatic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxpieChartstatic.TabIndex = 8;
+            this.pictureBoxpieChartstatic.TabStop = false;
+            this.pictureBoxpieChartstatic.MouseHover += new System.EventHandler(this.pictureBoxpieChartstatic_MouseHover);
+            // 
+            // labelReal_Time_Charts
+            // 
+            this.labelReal_Time_Charts.AutoSize = true;
+            this.labelReal_Time_Charts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(40)))), ((int)(((byte)(237)))));
+            this.labelReal_Time_Charts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelReal_Time_Charts.Location = new System.Drawing.Point(68, 57);
+            this.labelReal_Time_Charts.Name = "labelReal_Time_Charts";
+            this.labelReal_Time_Charts.Size = new System.Drawing.Size(265, 37);
+            this.labelReal_Time_Charts.TabIndex = 8;
+            this.labelReal_Time_Charts.Text = "Real Time Charts";
+            // 
+            // label_Static_Charts
+            // 
+            this.label_Static_Charts.AutoSize = true;
+            this.label_Static_Charts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(40)))), ((int)(((byte)(237)))));
+            this.label_Static_Charts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label_Static_Charts.Location = new System.Drawing.Point(68, 559);
+            this.label_Static_Charts.Name = "label_Static_Charts";
+            this.label_Static_Charts.Size = new System.Drawing.Size(201, 37);
+            this.label_Static_Charts.TabIndex = 9;
+            this.label_Static_Charts.Text = "Static Charts";
+            // 
+            // linkLabel_Help_Real_Time_Charts
+            // 
+            this.linkLabel_Help_Real_Time_Charts.AutoSize = true;
+            this.linkLabel_Help_Real_Time_Charts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel_Help_Real_Time_Charts.Location = new System.Drawing.Point(58, 94);
+            this.linkLabel_Help_Real_Time_Charts.Name = "linkLabel_Help_Real_Time_Charts";
+            this.linkLabel_Help_Real_Time_Charts.Size = new System.Drawing.Size(425, 29);
+            this.linkLabel_Help_Real_Time_Charts.TabIndex = 10;
+            this.linkLabel_Help_Real_Time_Charts.TabStop = true;
+            this.linkLabel_Help_Real_Time_Charts.Text = "Get Help On What is Realtime Charts ?";
+            this.linkLabel_Help_Real_Time_Charts.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Help_Real_Time_Charts_LinkClicked);
+            // 
+            // linkLabel_Help_On_Static_Charts
+            // 
+            this.linkLabel_Help_On_Static_Charts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.linkLabel_Help_On_Static_Charts.AutoSize = true;
+            this.linkLabel_Help_On_Static_Charts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel_Help_On_Static_Charts.Location = new System.Drawing.Point(70, 606);
+            this.linkLabel_Help_On_Static_Charts.Name = "linkLabel_Help_On_Static_Charts";
+            this.linkLabel_Help_On_Static_Charts.Size = new System.Drawing.Size(372, 29);
+            this.linkLabel_Help_On_Static_Charts.TabIndex = 11;
+            this.linkLabel_Help_On_Static_Charts.TabStop = true;
+            this.linkLabel_Help_On_Static_Charts.Text = "Get Help On what  is Static Charts";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(54, 951);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 15;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBoxMain_Header
+            // 
+            this.pictureBoxMain_Header.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMain_Header.Image")));
+            this.pictureBoxMain_Header.Location = new System.Drawing.Point(67, 0);
+            this.pictureBoxMain_Header.Name = "pictureBoxMain_Header";
+            this.pictureBoxMain_Header.Size = new System.Drawing.Size(1083, 54);
+            this.pictureBoxMain_Header.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMain_Header.TabIndex = 16;
+            this.pictureBoxMain_Header.TabStop = false;
+            // 
+            // panel_Try_Grap
+            // 
+            this.panel_Try_Grap.Controls.Add(this.labelLine_Graph_);
+            this.panel_Try_Grap.Controls.Add(this.label6);
+            this.panel_Try_Grap.Controls.Add(this.labelpie__chartdef);
+            this.panel_Try_Grap.Controls.Add(this.labelBarGraphdef);
+            this.panel_Try_Grap.Controls.Add(this.pictureBoxPie);
+            this.panel_Try_Grap.Controls.Add(this.labelBar_Graphheading);
+            this.panel_Try_Grap.Controls.Add(this.pictureBoxLine);
+            this.panel_Try_Grap.Controls.Add(this.pictureBoxColumn);
+            this.panel_Try_Grap.Controls.Add(this.labelPieChartheading);
+            this.panel_Try_Grap.Controls.Add(this.labelLineGraphHeading);
+            this.panel_Try_Grap.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.panel_Try_Grap.Location = new System.Drawing.Point(1149, 3);
+            this.panel_Try_Grap.Name = "panel_Try_Grap";
+            this.panel_Try_Grap.Size = new System.Drawing.Size(257, 951);
+            this.panel_Try_Grap.TabIndex = 17;
+            // 
+            // labelLine_Graph_
+            // 
+            this.labelLine_Graph_.AutoSize = true;
+            this.labelLine_Graph_.Location = new System.Drawing.Point(2, 64);
+            this.labelLine_Graph_.Name = "labelLine_Graph_";
+            this.labelLine_Graph_.Size = new System.Drawing.Size(258, 140);
+            this.labelLine_Graph_.TabIndex = 26;
+            this.labelLine_Graph_.Text = "Line graphs show dependent data, \r\nparticularly trends over time.\r\n--------------" +
+    "--Example----------------\r\nLine graphs depict a point value\r\nfor each category, " +
+    "\r\nwhich are joined in a line. \r\n\r\n";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label6.Location = new System.Drawing.Point(4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(249, 32);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Click Below To Try";
+            // 
+            // labelpie__chartdef
+            // 
+            this.labelpie__chartdef.AutoSize = true;
+            this.labelpie__chartdef.Location = new System.Drawing.Point(1, 658);
+            this.labelpie__chartdef.Name = "labelpie__chartdef";
+            this.labelpie__chartdef.Size = new System.Drawing.Size(256, 120);
+            this.labelpie__chartdef.TabIndex = 25;
+            this.labelpie__chartdef.Text = "A pie chart is cut up into segments.\r\nThe whole breaks down into parts.\r\n--------" +
+    "--------Example----------------\r\nSome Data \r\nSales figures for a year, \r\nbroken " +
+    "down by quarters";
+            // 
+            // labelBarGraphdef
+            // 
+            this.labelBarGraphdef.AutoSize = true;
+            this.labelBarGraphdef.Location = new System.Drawing.Point(3, 367);
+            this.labelBarGraphdef.Name = "labelBarGraphdef";
+            this.labelBarGraphdef.Size = new System.Drawing.Size(238, 120);
+            this.labelBarGraphdef.TabIndex = 24;
+            this.labelBarGraphdef.Text = "Bar Graphs show numbers that, \r\nare independent of each other.\r\n----------------E" +
+    "xample----------------\r\nSome Data \r\nCategory 1 4.1,Category 2 2.5\r\nCategory 3 3." +
+    "5,Category 4 4.7\r\n";
+            this.labelBarGraphdef.Click += new System.EventHandler(this.labelBarGraphdef_Click);
+            // 
+            // pictureBoxPie
+            // 
+            this.pictureBoxPie.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxPie.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPie.Image")));
+            this.pictureBoxPie.Location = new System.Drawing.Point(0, 793);
+            this.pictureBoxPie.Name = "pictureBoxPie";
+            this.pictureBoxPie.Size = new System.Drawing.Size(257, 173);
+            this.pictureBoxPie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPie.TabIndex = 23;
+            this.pictureBoxPie.TabStop = false;
+            // 
+            // labelBar_Graphheading
+            // 
+            this.labelBar_Graphheading.AutoSize = true;
+            this.labelBar_Graphheading.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelBar_Graphheading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelBar_Graphheading.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelBar_Graphheading.Location = new System.Drawing.Point(6, 622);
+            this.labelBar_Graphheading.Name = "labelBar_Graphheading";
+            this.labelBar_Graphheading.Size = new System.Drawing.Size(133, 32);
+            this.labelBar_Graphheading.TabIndex = 17;
+            this.labelBar_Graphheading.Text = "Pie Chart";
+            // 
+            // pictureBoxLine
+            // 
+            this.pictureBoxLine.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxLine.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLine.Image")));
+            this.pictureBoxLine.Location = new System.Drawing.Point(2, 216);
+            this.pictureBoxLine.Name = "pictureBoxLine";
+            this.pictureBoxLine.Size = new System.Drawing.Size(252, 116);
+            this.pictureBoxLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLine.TabIndex = 18;
+            this.pictureBoxLine.TabStop = false;
+            this.pictureBoxLine.Click += new System.EventHandler(this.pictureBoxLine_Click);
+            // 
+            // pictureBoxColumn
+            // 
+            this.pictureBoxColumn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxColumn.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxColumn.Image")));
+            this.pictureBoxColumn.Location = new System.Drawing.Point(3, 490);
+            this.pictureBoxColumn.Name = "pictureBoxColumn";
+            this.pictureBoxColumn.Size = new System.Drawing.Size(250, 129);
+            this.pictureBoxColumn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxColumn.TabIndex = 22;
+            this.pictureBoxColumn.TabStop = false;
+            // 
+            // labelPieChartheading
+            // 
+            this.labelPieChartheading.AutoSize = true;
+            this.labelPieChartheading.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelPieChartheading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelPieChartheading.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelPieChartheading.Location = new System.Drawing.Point(3, 335);
+            this.labelPieChartheading.Name = "labelPieChartheading";
+            this.labelPieChartheading.Size = new System.Drawing.Size(145, 32);
+            this.labelPieChartheading.TabIndex = 16;
+            this.labelPieChartheading.Text = "Bar Graph";
+            // 
+            // labelLineGraphHeading
+            // 
+            this.labelLineGraphHeading.AutoSize = true;
+            this.labelLineGraphHeading.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelLineGraphHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelLineGraphHeading.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelLineGraphHeading.Location = new System.Drawing.Point(3, 32);
+            this.labelLineGraphHeading.Name = "labelLineGraphHeading";
+            this.labelLineGraphHeading.Size = new System.Drawing.Size(156, 32);
+            this.labelLineGraphHeading.TabIndex = 15;
+            this.labelLineGraphHeading.Text = "Line Graph";
+            this.labelLineGraphHeading.Click += new System.EventHandler(this.labelLineGraphHeading_Click);
+            // 
+            // PanelSample
+            // 
+            this.PanelSample.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(180)))), ((int)(((byte)(209)))));
+            this.PanelSample.Controls.Add(this.label1);
+            this.PanelSample.Controls.Add(this.webBrowser1);
+            this.PanelSample.Controls.Add(this.textBoxUrl);
+            this.PanelSample.Controls.Add(this.panel_Try_Grap);
+            this.PanelSample.Controls.Add(this.pictureBoxMain_Header);
+            this.PanelSample.Controls.Add(this.pictureBox4);
+            this.PanelSample.Controls.Add(this.linkLabel_Help_On_Static_Charts);
+            this.PanelSample.Controls.Add(this.linkLabel_Help_Real_Time_Charts);
+            this.PanelSample.Controls.Add(this.label_Static_Charts);
+            this.PanelSample.Controls.Add(this.labelReal_Time_Charts);
+            this.PanelSample.Controls.Add(this.tableLayoutPanel1);
+            this.PanelSample.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.PanelSample.Location = new System.Drawing.Point(510, 6);
+            this.PanelSample.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.PanelSample.Name = "PanelSample";
+            this.PanelSample.Size = new System.Drawing.Size(1400, 1029);
+            this.PanelSample.TabIndex = 4;
+            this.PanelSample.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelSample_Paint);
+            // 
+            // textBoxUrl
+            // 
+            this.textBoxUrl.Location = new System.Drawing.Point(321, 439);
+            this.textBoxUrl.Name = "textBoxUrl";
+            this.textBoxUrl.Size = new System.Drawing.Size(362, 26);
+            this.textBoxUrl.TabIndex = 20;
+            this.textBoxUrl.Text = "https://www.youtube.com/watch?v=ZSzMW14BIvI";
+            this.textBoxUrl.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(824, 572);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "label1";
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(67, 126);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(859, 418);
+            this.webBrowser1.TabIndex = 21;
+            // 
+            // photoList
+            // 
+            this.photoList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.photoList.ImageSize = new System.Drawing.Size(16, 16);
+            this.photoList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Connection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1898, 1050);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.Controls.Add(this.PanelSample);
             this.Controls.Add(this.panelConnect);
             this.Name = "Connection";
@@ -454,30 +538,26 @@
             this.Text = "Connection";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Connection_Load);
-            this.PanelSample.ResumeLayout(false);
-            this.PanelSample.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.panelConnect.ResumeLayout(false);
             this.panelConnect.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxpieChartstatic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMain_Header)).EndInit();
+            this.panel_Try_Grap.ResumeLayout(false);
+            this.panel_Try_Grap.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColumn)).EndInit();
+            this.PanelSample.ResumeLayout(false);
+            this.PanelSample.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel PanelSample;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.Panel panelConnect;
         private System.Windows.Forms.Label labelServer;
         private System.Windows.Forms.Button buttonDataBase;
@@ -485,11 +565,34 @@
         private System.Windows.Forms.Button buttonExcel;
         private System.Windows.Forms.Label labelFile;
         private System.Windows.Forms.Label labelConnect;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabelOn_Connection;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxpieChartstatic;
+        private System.Windows.Forms.Label labelReal_Time_Charts;
+        private System.Windows.Forms.Label label_Static_Charts;
+        private System.Windows.Forms.LinkLabel linkLabel_Help_Real_Time_Charts;
+        private System.Windows.Forms.LinkLabel linkLabel_Help_On_Static_Charts;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBoxMain_Header;
+        private System.Windows.Forms.Panel panel_Try_Grap;
+        private System.Windows.Forms.Label labelBarGraphdef;
+        private System.Windows.Forms.PictureBox pictureBoxPie;
+        private System.Windows.Forms.Label labelBar_Graphheading;
+        private System.Windows.Forms.PictureBox pictureBoxLine;
+        private System.Windows.Forms.PictureBox pictureBoxColumn;
+        private System.Windows.Forms.Label labelPieChartheading;
+        private System.Windows.Forms.Label labelLineGraphHeading;
+        private System.Windows.Forms.Panel PanelSample;
+        private System.Windows.Forms.Label labelpie__chartdef;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelLine_Graph_;
+        private System.Windows.Forms.TextBox textBoxUrl;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ImageList photoList;
     }
 }

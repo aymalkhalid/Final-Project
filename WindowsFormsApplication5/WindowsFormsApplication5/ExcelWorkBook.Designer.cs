@@ -90,7 +90,7 @@ namespace WindowsFormsApplication5
             // buttonOpen
             // 
             this.buttonOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.buttonOpen.Location = new System.Drawing.Point(999, 20);
+            this.buttonOpen.Location = new System.Drawing.Point(1120, 20);
             this.buttonOpen.Name = "buttonOpen";
             this.buttonOpen.Size = new System.Drawing.Size(343, 67);
             this.buttonOpen.TabIndex = 0;

@@ -25,7 +25,6 @@ Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\LiveCharts.WinFor
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\LiveCharts.Wpf.pdb
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\LiveCharts.Wpf.xml
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\Newtonsoft.Json.xml
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\Interop.AdHocReportingExcelClientLib.dll
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csproj.ResolveComReference.cache
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Connection.resources
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Start_Data_Visualization.resources
@@ -35,6 +34,12 @@ Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsAppli
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csproj.GenerateResource.Cache
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.exe
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.pdb
-Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csprojResolveAssemblyReference.cache
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\Checks.dll
 Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\Checks.pdb
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\Interop.ShockwaveFlashObjects.dll
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\AxInterop.ShockwaveFlashObjects.dll
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\Interop.ShockwaveFlashObjects.dll
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\AxInterop.ShockwaveFlashObjects.dll
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csprojResolveAssemblyReference.cache
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Data_Form_Line_Graph.resources
+Z:\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Bar_Chart.resources
