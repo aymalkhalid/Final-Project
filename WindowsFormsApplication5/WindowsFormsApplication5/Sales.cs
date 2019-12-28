@@ -8,7 +8,8 @@ namespace WindowsFormsApplication5
 {
     class Sales
     {
-        public string Sales_Man { get; set; }
+        //public string Sales_Man { get; set; }
         public double Apps_Solds { get; set; }
+        public int year { get; set; }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cartesianChart_Line_Graph = new LiveCharts.WinForms.CartesianChart();
             this.button_Load_Line_Graph = new System.Windows.Forms.Button();
             this.Revenue_Line_Graph_dataGrid = new System.Windows.Forms.DataGridView();
@@ -74,14 +75,19 @@
             this.Revenue_Line_Graph_dataGrid.Location = new System.Drawing.Point(36, 241);
             this.Revenue_Line_Graph_dataGrid.Name = "Revenue_Line_Graph_dataGrid";
             this.Revenue_Line_Graph_dataGrid.RowTemplate.Height = 28;
-            this.Revenue_Line_Graph_dataGrid.Size = new System.Drawing.Size(653, 312);
+            this.Revenue_Line_Graph_dataGrid.Size = new System.Drawing.Size(447, 312);
             this.Revenue_Line_Graph_dataGrid.TabIndex = 2;
             this.Revenue_Line_Graph_dataGrid.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView1_DefaultValuesNeeded);
             // 
             // Income
             // 
             this.Income.DataPropertyName = "Income";
-            this.Income.HeaderText = "Income";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Format = "C3";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Income.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Income.HeaderText = "Income ";
             this.Income.Name = "Income";
             // 
             // labelInstructions
@@ -116,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1859, 830);
             this.Controls.Add(this.labelInstructions);
             this.Controls.Add(this.Revenue_Line_Graph_dataGrid);
@@ -140,9 +146,9 @@
         private System.Windows.Forms.Button button_Load_Line_Graph;
         private System.Windows.Forms.DataGridView Revenue_Line_Graph_dataGrid;
         private System.Windows.Forms.BindingSource revenueBindingSource;
+        private System.Windows.Forms.Label labelInstructions;
         private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Income;
         private System.Windows.Forms.DataGridViewTextBoxColumn monthDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label labelInstructions;
     }
 }

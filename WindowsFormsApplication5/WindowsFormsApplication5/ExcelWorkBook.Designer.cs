@@ -33,28 +33,27 @@ namespace WindowsFormsApplication5
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Excel_WorkBook_Form));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonOpen = new System.Windows.Forms.Button();
             this.labelExcelFile = new System.Windows.Forms.Label();
             this.panelOpenMSExcel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelLeftSide = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBoxScatterPlot = new System.Windows.Forms.PictureBox();
-            this.pictureBoxStackedArea = new System.Windows.Forms.PictureBox();
             this.pictureBoxPie = new System.Windows.Forms.PictureBox();
             this.pictureBoxRow = new System.Windows.Forms.PictureBox();
             this.pictureBoxStacked = new System.Windows.Forms.PictureBox();
-            this.pictureBoxColumn = new System.Windows.Forms.PictureBox();
             this.pictureBoxLine = new System.Windows.Forms.PictureBox();
-            this.labelColumnChart = new System.Windows.Forms.Label();
+            this.labelBasicStacked = new System.Windows.Forms.Label();
             this.labelLineChart = new System.Windows.Forms.Label();
-            this.labelStackedChart = new System.Windows.Forms.Label();
-            this.labelRowChart = new System.Windows.Forms.Label();
-            this.labelStackedArea = new System.Windows.Forms.Label();
+            this.labelDoughNutChart = new System.Windows.Forms.Label();
             this.labelPieChart = new System.Windows.Forms.Label();
-            this.labelScatterPlot = new System.Windows.Forms.Label();
+            this.pictureBoxDoughNut = new System.Windows.Forms.PictureBox();
+            this.labelRowChart = new System.Windows.Forms.Label();
+            this.pictureBoxColumn = new System.Windows.Forms.PictureBox();
+            this.labelColumnChart = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.labelSelectChart = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.labelFilePath = new System.Windows.Forms.Label();
@@ -69,18 +68,24 @@ namespace WindowsFormsApplication5
             this.dataGridViewExcel = new System.Windows.Forms.DataGridView();
             this.labelExcelTable = new System.Windows.Forms.Label();
             this.nullLogFactoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            this.pieChart_Population = new LiveCharts.WinForms.PieChart();
+            this.pieChart1 = new LiveCharts.WinForms.PieChart();
+            this.cartesianChartStacked = new LiveCharts.WinForms.CartesianChart();
+            this.cartesianChartLine = new LiveCharts.WinForms.CartesianChart();
+            this.cartesianChart_Basic_Row = new LiveCharts.WinForms.CartesianChart();
+            this.cartesianChartBasicColumn = new LiveCharts.WinForms.CartesianChart();
+            this.timerLoadingData = new System.Windows.Forms.Timer(this.components);
             this.panelOpenMSExcel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelLeftSide.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScatterPlot)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStackedArea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStacked)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColumn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDoughNut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColumn)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExcel)).BeginInit();
@@ -90,9 +95,9 @@ namespace WindowsFormsApplication5
             // buttonOpen
             // 
             this.buttonOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.buttonOpen.Location = new System.Drawing.Point(1120, 20);
+            this.buttonOpen.Location = new System.Drawing.Point(1093, 11);
             this.buttonOpen.Name = "buttonOpen";
-            this.buttonOpen.Size = new System.Drawing.Size(343, 67);
+            this.buttonOpen.Size = new System.Drawing.Size(343, 58);
             this.buttonOpen.TabIndex = 0;
             this.buttonOpen.Text = "...Browse";
             this.buttonOpen.UseVisualStyleBackColor = true;
@@ -101,29 +106,41 @@ namespace WindowsFormsApplication5
             // labelExcelFile
             // 
             this.labelExcelFile.AutoSize = true;
-            this.labelExcelFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
-            this.labelExcelFile.Location = new System.Drawing.Point(342, 20);
+            this.labelExcelFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.labelExcelFile.Location = new System.Drawing.Point(408, 8);
             this.labelExcelFile.Name = "labelExcelFile";
-            this.labelExcelFile.Size = new System.Drawing.Size(674, 73);
+            this.labelExcelFile.Size = new System.Drawing.Size(503, 55);
             this.labelExcelFile.TabIndex = 1;
             this.labelExcelFile.Text = "Edit Your File in Excel ";
             // 
             // panelOpenMSExcel
             // 
+            this.panelOpenMSExcel.Controls.Add(this.pictureBox2);
             this.panelOpenMSExcel.Controls.Add(this.pictureBox1);
             this.panelOpenMSExcel.Controls.Add(this.labelExcelFile);
             this.panelOpenMSExcel.Controls.Add(this.buttonOpen);
-            this.panelOpenMSExcel.Location = new System.Drawing.Point(0, 948);
+            this.panelOpenMSExcel.Location = new System.Drawing.Point(3, 959);
             this.panelOpenMSExcel.Name = "panelOpenMSExcel";
-            this.panelOpenMSExcel.Size = new System.Drawing.Size(1934, 120);
+            this.panelOpenMSExcel.Size = new System.Drawing.Size(1909, 79);
             this.panelOpenMSExcel.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1603, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(291, 55);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(337, 93);
+            this.pictureBox1.Size = new System.Drawing.Size(333, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -132,9 +149,9 @@ namespace WindowsFormsApplication5
             // 
             this.panelLeftSide.Controls.Add(this.tableLayoutPanel1);
             this.panelLeftSide.Controls.Add(this.panel1);
-            this.panelLeftSide.Location = new System.Drawing.Point(0, 12);
+            this.panelLeftSide.Location = new System.Drawing.Point(6, 5);
             this.panelLeftSide.Name = "panelLeftSide";
-            this.panelLeftSide.Size = new System.Drawing.Size(384, 941);
+            this.panelLeftSide.Size = new System.Drawing.Size(378, 948);
             this.panelLeftSide.TabIndex = 8;
             this.panelLeftSide.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -143,172 +160,172 @@ namespace WindowsFormsApplication5
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.44973F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBoxScatterPlot, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBoxStackedArea, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.pictureBoxPie, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.pictureBoxRow, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBoxStacked, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBoxColumn, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBoxStacked, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.pictureBoxLine, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelColumnChart, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelBasicStacked, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelLineChart, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelStackedChart, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.labelRowChart, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.labelStackedArea, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.labelDoughNutChart, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelPieChart, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.labelScatterPlot, 0, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 439);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBoxDoughNut, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelRowChart, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBoxColumn, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.labelColumnChart, 0, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 500);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.46029F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.01629F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.23829F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.84929F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.84929F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.60896F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.99593F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(378, 499);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.36842F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(353, 445);
             this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // pictureBoxScatterPlot
-            // 
-            this.pictureBoxScatterPlot.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxScatterPlot.Image")));
-            this.pictureBoxScatterPlot.Location = new System.Drawing.Point(112, 391);
-            this.pictureBoxScatterPlot.Name = "pictureBoxScatterPlot";
-            this.pictureBoxScatterPlot.Size = new System.Drawing.Size(263, 105);
-            this.pictureBoxScatterPlot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxScatterPlot.TabIndex = 23;
-            this.pictureBoxScatterPlot.TabStop = false;
-            // 
-            // pictureBoxStackedArea
-            // 
-            this.pictureBoxStackedArea.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStackedArea.Image")));
-            this.pictureBoxStackedArea.Location = new System.Drawing.Point(112, 334);
-            this.pictureBoxStackedArea.Name = "pictureBoxStackedArea";
-            this.pictureBoxStackedArea.Size = new System.Drawing.Size(263, 51);
-            this.pictureBoxStackedArea.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxStackedArea.TabIndex = 22;
-            this.pictureBoxStackedArea.TabStop = false;
             // 
             // pictureBoxPie
             // 
+            this.pictureBoxPie.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxPie.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPie.Image")));
-            this.pictureBoxPie.Location = new System.Drawing.Point(112, 266);
+            this.pictureBoxPie.Location = new System.Drawing.Point(137, 276);
             this.pictureBoxPie.Name = "pictureBoxPie";
-            this.pictureBoxPie.Size = new System.Drawing.Size(263, 62);
+            this.pictureBoxPie.Size = new System.Drawing.Size(213, 59);
             this.pictureBoxPie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPie.TabIndex = 21;
             this.pictureBoxPie.TabStop = false;
+            this.pictureBoxPie.Click += new System.EventHandler(this.pictureBoxPie_Click);
             // 
             // pictureBoxRow
             // 
+            this.pictureBoxRow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxRow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRow.Image")));
-            this.pictureBoxRow.Location = new System.Drawing.Point(112, 198);
+            this.pictureBoxRow.Location = new System.Drawing.Point(137, 205);
             this.pictureBoxRow.Name = "pictureBoxRow";
-            this.pictureBoxRow.Size = new System.Drawing.Size(263, 62);
+            this.pictureBoxRow.Size = new System.Drawing.Size(213, 59);
             this.pictureBoxRow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxRow.TabIndex = 20;
             this.pictureBoxRow.TabStop = false;
+            this.pictureBoxRow.Click += new System.EventHandler(this.pictureBoxRow_Click);
             // 
             // pictureBoxStacked
             // 
+            this.pictureBoxStacked.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxStacked.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStacked.Image")));
-            this.pictureBoxStacked.Location = new System.Drawing.Point(112, 133);
+            this.pictureBoxStacked.Location = new System.Drawing.Point(137, 77);
             this.pictureBoxStacked.Name = "pictureBoxStacked";
-            this.pictureBoxStacked.Size = new System.Drawing.Size(263, 56);
+            this.pictureBoxStacked.Size = new System.Drawing.Size(213, 50);
             this.pictureBoxStacked.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxStacked.TabIndex = 19;
+            this.pictureBoxStacked.TabIndex = 11;
             this.pictureBoxStacked.TabStop = false;
-            // 
-            // pictureBoxColumn
-            // 
-            this.pictureBoxColumn.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxColumn.Image")));
-            this.pictureBoxColumn.Location = new System.Drawing.Point(112, 74);
-            this.pictureBoxColumn.Name = "pictureBoxColumn";
-            this.pictureBoxColumn.Size = new System.Drawing.Size(263, 53);
-            this.pictureBoxColumn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxColumn.TabIndex = 11;
-            this.pictureBoxColumn.TabStop = false;
+            this.pictureBoxStacked.Click += new System.EventHandler(this.pictureBoxStacked_Click);
             // 
             // pictureBoxLine
             // 
+            this.pictureBoxLine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxLine.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLine.Image")));
-            this.pictureBoxLine.Location = new System.Drawing.Point(112, 3);
+            this.pictureBoxLine.Location = new System.Drawing.Point(137, 3);
             this.pictureBoxLine.Name = "pictureBoxLine";
-            this.pictureBoxLine.Size = new System.Drawing.Size(263, 65);
+            this.pictureBoxLine.Size = new System.Drawing.Size(213, 68);
             this.pictureBoxLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLine.TabIndex = 10;
             this.pictureBoxLine.TabStop = false;
             this.pictureBoxLine.Click += new System.EventHandler(this.pictureBoxLine_Click);
             // 
-            // labelColumnChart
+            // labelBasicStacked
             // 
-            this.labelColumnChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelColumnChart.Location = new System.Drawing.Point(3, 71);
-            this.labelColumnChart.Name = "labelColumnChart";
-            this.labelColumnChart.Size = new System.Drawing.Size(100, 59);
-            this.labelColumnChart.TabIndex = 15;
-            this.labelColumnChart.Text = "Column\r\nChart";
+            this.labelBasicStacked.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelBasicStacked.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelBasicStacked.Location = new System.Drawing.Point(3, 74);
+            this.labelBasicStacked.Name = "labelBasicStacked";
+            this.labelBasicStacked.Size = new System.Drawing.Size(128, 56);
+            this.labelBasicStacked.TabIndex = 15;
+            this.labelBasicStacked.Text = "Stacked \r\nChart";
+            this.labelBasicStacked.Click += new System.EventHandler(this.labelBasicStacked_Click);
             // 
             // labelLineChart
             // 
+            this.labelLineChart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelLineChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelLineChart.Location = new System.Drawing.Point(3, 0);
             this.labelLineChart.Name = "labelLineChart";
-            this.labelLineChart.Size = new System.Drawing.Size(100, 71);
+            this.labelLineChart.Size = new System.Drawing.Size(100, 67);
             this.labelLineChart.TabIndex = 13;
             this.labelLineChart.Text = "Line\r\nChart";
+            this.labelLineChart.Click += new System.EventHandler(this.labelLineChart_Click);
             // 
-            // labelStackedChart
+            // labelDoughNutChart
             // 
-            this.labelStackedChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelStackedChart.Location = new System.Drawing.Point(3, 130);
-            this.labelStackedChart.Name = "labelStackedChart";
-            this.labelStackedChart.Size = new System.Drawing.Size(100, 65);
-            this.labelStackedChart.TabIndex = 16;
-            this.labelStackedChart.Text = "Stacked\r\nChart";
-            // 
-            // labelRowChart
-            // 
-            this.labelRowChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelRowChart.Location = new System.Drawing.Point(3, 195);
-            this.labelRowChart.Name = "labelRowChart";
-            this.labelRowChart.Size = new System.Drawing.Size(100, 65);
-            this.labelRowChart.TabIndex = 10;
-            this.labelRowChart.Text = "Row\r\nChart";
-            // 
-            // labelStackedArea
-            // 
-            this.labelStackedArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelStackedArea.Location = new System.Drawing.Point(3, 331);
-            this.labelStackedArea.Name = "labelStackedArea";
-            this.labelStackedArea.Size = new System.Drawing.Size(103, 57);
-            this.labelStackedArea.TabIndex = 12;
-            this.labelStackedArea.Text = "Stacked\r\nArea";
-            this.labelStackedArea.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelDoughNutChart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelDoughNutChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelDoughNutChart.Location = new System.Drawing.Point(3, 135);
+            this.labelDoughNutChart.Name = "labelDoughNutChart";
+            this.labelDoughNutChart.Size = new System.Drawing.Size(100, 62);
+            this.labelDoughNutChart.TabIndex = 16;
+            this.labelDoughNutChart.Text = "Dough Nut";
+            this.labelDoughNutChart.Click += new System.EventHandler(this.labelDoughNutChart_Click);
             // 
             // labelPieChart
             // 
+            this.labelPieChart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelPieChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelPieChart.Location = new System.Drawing.Point(3, 263);
+            this.labelPieChart.Location = new System.Drawing.Point(3, 273);
             this.labelPieChart.Name = "labelPieChart";
             this.labelPieChart.Size = new System.Drawing.Size(94, 60);
             this.labelPieChart.TabIndex = 17;
             this.labelPieChart.Text = "Pie\r\nChart";
             this.labelPieChart.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelPieChart.Click += new System.EventHandler(this.labelPieChart_Click);
             // 
-            // labelScatterPlot
+            // pictureBoxDoughNut
             // 
-            this.labelScatterPlot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelScatterPlot.Location = new System.Drawing.Point(3, 388);
-            this.labelScatterPlot.Name = "labelScatterPlot";
-            this.labelScatterPlot.Size = new System.Drawing.Size(100, 71);
-            this.labelScatterPlot.TabIndex = 18;
-            this.labelScatterPlot.Text = "Scatter Plot";
-            this.labelScatterPlot.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.pictureBoxDoughNut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxDoughNut.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDoughNut.Image")));
+            this.pictureBoxDoughNut.Location = new System.Drawing.Point(137, 138);
+            this.pictureBoxDoughNut.Name = "pictureBoxDoughNut";
+            this.pictureBoxDoughNut.Size = new System.Drawing.Size(213, 56);
+            this.pictureBoxDoughNut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxDoughNut.TabIndex = 19;
+            this.pictureBoxDoughNut.TabStop = false;
+            this.pictureBoxDoughNut.Click += new System.EventHandler(this.pictureBoxDoughNut_Click);
+            // 
+            // labelRowChart
+            // 
+            this.labelRowChart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelRowChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelRowChart.Location = new System.Drawing.Point(3, 202);
+            this.labelRowChart.Name = "labelRowChart";
+            this.labelRowChart.Size = new System.Drawing.Size(100, 65);
+            this.labelRowChart.TabIndex = 10;
+            this.labelRowChart.Text = "Row\r\nChart";
+            // 
+            // pictureBoxColumn
+            // 
+            this.pictureBoxColumn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxColumn.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxColumn.Image")));
+            this.pictureBoxColumn.Location = new System.Drawing.Point(137, 347);
+            this.pictureBoxColumn.Name = "pictureBoxColumn";
+            this.pictureBoxColumn.Size = new System.Drawing.Size(213, 70);
+            this.pictureBoxColumn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxColumn.TabIndex = 22;
+            this.pictureBoxColumn.TabStop = false;
+            this.pictureBoxColumn.Click += new System.EventHandler(this.pictureBoxColumn_Click);
+            // 
+            // labelColumnChart
+            // 
+            this.labelColumnChart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelColumnChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelColumnChart.Location = new System.Drawing.Point(3, 344);
+            this.labelColumnChart.Name = "labelColumnChart";
+            this.labelColumnChart.Size = new System.Drawing.Size(112, 68);
+            this.labelColumnChart.TabIndex = 12;
+            this.labelColumnChart.Text = "Column\r\nChart";
+            this.labelColumnChart.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelColumnChart.Click += new System.EventHandler(this.labelColumnChart_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.progressBar1);
             this.panel1.Controls.Add(this.labelSelectChart);
             this.panel1.Controls.Add(this.btnBrowse);
             this.panel1.Controls.Add(this.labelFilePath);
@@ -319,28 +336,34 @@ namespace WindowsFormsApplication5
             this.panel1.Controls.Add(this.textBoxfilename);
             this.panel1.Controls.Add(this.textBoxFileType);
             this.panel1.Controls.Add(this.labelfileType);
-            this.panel1.Location = new System.Drawing.Point(0, 3);
+            this.panel1.Location = new System.Drawing.Point(11, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(381, 430);
+            this.panel1.Size = new System.Drawing.Size(345, 465);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(0, 355);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(332, 26);
+            this.progressBar1.TabIndex = 20;
+            // 
             // labelSelectChart
             // 
-            this.labelSelectChart.AutoSize = true;
-            this.labelSelectChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelSelectChart.Location = new System.Drawing.Point(7, 374);
+            this.labelSelectChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelSelectChart.Location = new System.Drawing.Point(6, 384);
             this.labelSelectChart.Name = "labelSelectChart";
-            this.labelSelectChart.Size = new System.Drawing.Size(192, 37);
+            this.labelSelectChart.Size = new System.Drawing.Size(257, 62);
             this.labelSelectChart.TabIndex = 17;
-            this.labelSelectChart.Text = "Select Chart";
+            this.labelSelectChart.Text = "Can only Create ";
             // 
             // btnBrowse
             // 
             this.btnBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnBrowse.Location = new System.Drawing.Point(-1, 3);
+            this.btnBrowse.Location = new System.Drawing.Point(-6, 12);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(377, 49);
+            this.btnBrowse.Size = new System.Drawing.Size(338, 38);
             this.btnBrowse.TabIndex = 10;
             this.btnBrowse.Text = "...Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
@@ -350,7 +373,7 @@ namespace WindowsFormsApplication5
             // 
             this.labelFilePath.AutoSize = true;
             this.labelFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelFilePath.Location = new System.Drawing.Point(4, 125);
+            this.labelFilePath.Location = new System.Drawing.Point(4, 128);
             this.labelFilePath.Name = "labelFilePath";
             this.labelFilePath.Size = new System.Drawing.Size(114, 29);
             this.labelFilePath.TabIndex = 18;
@@ -360,7 +383,7 @@ namespace WindowsFormsApplication5
             // 
             this.labelFileName.AutoSize = true;
             this.labelFileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelFileName.Location = new System.Drawing.Point(3, 55);
+            this.labelFileName.Location = new System.Drawing.Point(4, 53);
             this.labelFileName.Name = "labelFileName";
             this.labelFileName.Size = new System.Drawing.Size(131, 29);
             this.labelFileName.TabIndex = 12;
@@ -369,26 +392,26 @@ namespace WindowsFormsApplication5
             // comboBoxSheetSelected
             // 
             this.comboBoxSheetSelected.FormattingEnabled = true;
-            this.comboBoxSheetSelected.Location = new System.Drawing.Point(-1, 298);
+            this.comboBoxSheetSelected.Location = new System.Drawing.Point(0, 321);
             this.comboBoxSheetSelected.Name = "comboBoxSheetSelected";
-            this.comboBoxSheetSelected.Size = new System.Drawing.Size(378, 28);
+            this.comboBoxSheetSelected.Size = new System.Drawing.Size(332, 28);
             this.comboBoxSheetSelected.TabIndex = 13;
             this.comboBoxSheetSelected.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBoxFilePath
             // 
             this.textBoxFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxFilePath.Location = new System.Drawing.Point(3, 158);
+            this.textBoxFilePath.Location = new System.Drawing.Point(3, 160);
             this.textBoxFilePath.Name = "textBoxFilePath";
             this.textBoxFilePath.ReadOnly = true;
-            this.textBoxFilePath.Size = new System.Drawing.Size(378, 35);
+            this.textBoxFilePath.Size = new System.Drawing.Size(329, 35);
             this.textBoxFilePath.TabIndex = 19;
             // 
             // labelSelected_Sheet
             // 
             this.labelSelected_Sheet.AutoSize = true;
             this.labelSelected_Sheet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelSelected_Sheet.Location = new System.Drawing.Point(4, 266);
+            this.labelSelected_Sheet.Location = new System.Drawing.Point(6, 289);
             this.labelSelected_Sheet.Name = "labelSelected_Sheet";
             this.labelSelected_Sheet.Size = new System.Drawing.Size(191, 29);
             this.labelSelected_Sheet.TabIndex = 15;
@@ -397,20 +420,20 @@ namespace WindowsFormsApplication5
             // textBoxfilename
             // 
             this.textBoxfilename.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxfilename.Location = new System.Drawing.Point(3, 87);
+            this.textBoxfilename.Location = new System.Drawing.Point(3, 90);
             this.textBoxfilename.Name = "textBoxfilename";
             this.textBoxfilename.ReadOnly = true;
-            this.textBoxfilename.Size = new System.Drawing.Size(378, 35);
+            this.textBoxfilename.Size = new System.Drawing.Size(329, 35);
             this.textBoxfilename.TabIndex = 14;
             // 
             // textBoxFileType
             // 
             this.textBoxFileType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxFileType.ForeColor = System.Drawing.Color.DarkGreen;
-            this.textBoxFileType.Location = new System.Drawing.Point(3, 228);
+            this.textBoxFileType.Location = new System.Drawing.Point(3, 241);
             this.textBoxFileType.Name = "textBoxFileType";
             this.textBoxFileType.ReadOnly = true;
-            this.textBoxFileType.Size = new System.Drawing.Size(378, 35);
+            this.textBoxFileType.Size = new System.Drawing.Size(329, 35);
             this.textBoxFileType.TabIndex = 17;
             this.textBoxFileType.TextChanged += new System.EventHandler(this.textBoxFileType_TextChanged);
             // 
@@ -418,7 +441,7 @@ namespace WindowsFormsApplication5
             // 
             this.labelfileType.AutoSize = true;
             this.labelfileType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelfileType.Location = new System.Drawing.Point(3, 196);
+            this.labelfileType.Location = new System.Drawing.Point(1, 198);
             this.labelfileType.Name = "labelfileType";
             this.labelfileType.Size = new System.Drawing.Size(121, 29);
             this.labelfileType.TabIndex = 16;
@@ -427,37 +450,25 @@ namespace WindowsFormsApplication5
             // panel3
             // 
             this.panel3.Controls.Add(this.dataGridViewExcel);
-            this.panel3.Location = new System.Drawing.Point(390, 584);
+            this.panel3.Location = new System.Drawing.Point(444, 609);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1533, 358);
+            this.panel3.Size = new System.Drawing.Size(1468, 344);
             this.panel3.TabIndex = 9;
             // 
             // dataGridViewExcel
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dataGridViewExcel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewExcel.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewExcel.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewExcel.BackgroundColor = System.Drawing.Color.AntiqueWhite;
-            this.dataGridViewExcel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridViewExcel.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridViewExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExcel.Location = new System.Drawing.Point(7, 0);
+            this.dataGridViewExcel.Location = new System.Drawing.Point(6, 3);
             this.dataGridViewExcel.Name = "dataGridViewExcel";
-            this.dataGridViewExcel.ReadOnly = true;
             this.dataGridViewExcel.RowTemplate.Height = 28;
-            this.dataGridViewExcel.Size = new System.Drawing.Size(1527, 355);
-            this.dataGridViewExcel.TabIndex = 11;
+            this.dataGridViewExcel.Size = new System.Drawing.Size(1447, 329);
+            this.dataGridViewExcel.TabIndex = 0;
             // 
             // labelExcelTable
             // 
             this.labelExcelTable.AutoSize = true;
             this.labelExcelTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelExcelTable.Location = new System.Drawing.Point(390, 541);
+            this.labelExcelTable.Location = new System.Drawing.Point(390, 569);
             this.labelExcelTable.Name = "labelExcelTable";
             this.labelExcelTable.Size = new System.Drawing.Size(477, 37);
             this.labelExcelTable.TabIndex = 12;
@@ -469,13 +480,60 @@ namespace WindowsFormsApplication5
             // 
             this.nullLogFactoryBindingSource.DataSource = typeof(ExcelDataReader.Log.Logger.NullLogFactory);
             // 
-            // cartesianChart1
+            // pieChart_Population
             // 
-            this.cartesianChart1.Location = new System.Drawing.Point(606, 90);
-            this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(875, 355);
-            this.cartesianChart1.TabIndex = 14;
-            this.cartesianChart1.Text = "cartesianChart1";
+            this.pieChart_Population.Location = new System.Drawing.Point(390, 12);
+            this.pieChart_Population.Name = "pieChart_Population";
+            this.pieChart_Population.Size = new System.Drawing.Size(757, 520);
+            this.pieChart_Population.TabIndex = 13;
+            this.pieChart_Population.Text = "pieChart1";
+            this.pieChart_Population.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.pieChart_Population_ChildChanged);
+            // 
+            // pieChart1
+            // 
+            this.pieChart1.Location = new System.Drawing.Point(1236, 32);
+            this.pieChart1.Name = "pieChart1";
+            this.pieChart1.Size = new System.Drawing.Size(661, 507);
+            this.pieChart1.TabIndex = 14;
+            this.pieChart1.Text = "pieChart1";
+            // 
+            // cartesianChartStacked
+            // 
+            this.cartesianChartStacked.Location = new System.Drawing.Point(450, 46);
+            this.cartesianChartStacked.Name = "cartesianChartStacked";
+            this.cartesianChartStacked.Size = new System.Drawing.Size(1447, 473);
+            this.cartesianChartStacked.TabIndex = 15;
+            this.cartesianChartStacked.Text = "cartesianChart1";
+            // 
+            // cartesianChartLine
+            // 
+            this.cartesianChartLine.Location = new System.Drawing.Point(444, 46);
+            this.cartesianChartLine.Name = "cartesianChartLine";
+            this.cartesianChartLine.Size = new System.Drawing.Size(1468, 473);
+            this.cartesianChartLine.TabIndex = 16;
+            this.cartesianChartLine.Text = "cartesianChart1";
+            // 
+            // cartesianChart_Basic_Row
+            // 
+            this.cartesianChart_Basic_Row.Location = new System.Drawing.Point(444, 32);
+            this.cartesianChart_Basic_Row.Name = "cartesianChart_Basic_Row";
+            this.cartesianChart_Basic_Row.Size = new System.Drawing.Size(1417, 473);
+            this.cartesianChart_Basic_Row.TabIndex = 17;
+            this.cartesianChart_Basic_Row.Text = "cartesianChart1";
+            // 
+            // cartesianChartBasicColumn
+            // 
+            this.cartesianChartBasicColumn.Location = new System.Drawing.Point(455, 46);
+            this.cartesianChartBasicColumn.Name = "cartesianChartBasicColumn";
+            this.cartesianChartBasicColumn.Size = new System.Drawing.Size(1442, 431);
+            this.cartesianChartBasicColumn.TabIndex = 18;
+            this.cartesianChartBasicColumn.Text = "cartesianChart_Column";
+            // 
+            // timerLoadingData
+            // 
+            this.timerLoadingData.Enabled = true;
+            this.timerLoadingData.Interval = 10000;
+            this.timerLoadingData.Tick += new System.EventHandler(this.timerLoadingData_Tick);
             // 
             // Excel_WorkBook_Form
             // 
@@ -483,7 +541,12 @@ namespace WindowsFormsApplication5
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
-            this.Controls.Add(this.cartesianChart1);
+            this.Controls.Add(this.cartesianChartBasicColumn);
+            this.Controls.Add(this.cartesianChart_Basic_Row);
+            this.Controls.Add(this.cartesianChartLine);
+            this.Controls.Add(this.cartesianChartStacked);
+            this.Controls.Add(this.pieChart1);
+            this.Controls.Add(this.pieChart_Population);
             this.Controls.Add(this.labelExcelTable);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelLeftSide);
@@ -495,16 +558,16 @@ namespace WindowsFormsApplication5
             this.Load += new System.EventHandler(this.WorkBook_Load);
             this.panelOpenMSExcel.ResumeLayout(false);
             this.panelOpenMSExcel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelLeftSide.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScatterPlot)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStackedArea)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStacked)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColumn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDoughNut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColumn)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -533,7 +596,6 @@ namespace WindowsFormsApplication5
         private Label labelFileName;
         private ComboBox comboBoxSheetSelected;
         private Button btnBrowse;
-        private DataGridView dataGridViewExcel;
         private Label labelExcelTable;
         private TextBox textBoxFileType;
         private Label labelfileType;
@@ -541,21 +603,28 @@ namespace WindowsFormsApplication5
         private TextBox textBoxFilePath;
         private Panel panel1;
         private TableLayoutPanel tableLayoutPanel1;
-        private Label labelColumnChart;
+        private Label labelBasicStacked;
         private Label labelLineChart;
-        private Label labelStackedChart;
+        private Label labelDoughNutChart;
         private Label labelRowChart;
-        private Label labelStackedArea;
+        private Label labelColumnChart;
         private Label labelPieChart;
         private Label labelSelectChart;
-        private Label labelScatterPlot;
-        private PictureBox pictureBoxScatterPlot;
-        private PictureBox pictureBoxStackedArea;
+        private PictureBox pictureBoxColumn;
         private PictureBox pictureBoxPie;
         private PictureBox pictureBoxRow;
         private PictureBox pictureBoxStacked;
-        private PictureBox pictureBoxColumn;
         private PictureBox pictureBoxLine;
-        private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private LiveCharts.WinForms.PieChart pieChart_Population;
+        private PictureBox pictureBoxDoughNut;
+        private LiveCharts.WinForms.PieChart pieChart1;
+        private LiveCharts.WinForms.CartesianChart cartesianChartStacked;
+        private DataGridView dataGridViewExcel;
+        private LiveCharts.WinForms.CartesianChart cartesianChartLine;
+        private LiveCharts.WinForms.CartesianChart cartesianChart_Basic_Row;
+        private LiveCharts.WinForms.CartesianChart cartesianChartBasicColumn;
+        private ProgressBar progressBar1;
+        private Timer timerLoadingData;
+        private PictureBox pictureBox2;
     }
 }

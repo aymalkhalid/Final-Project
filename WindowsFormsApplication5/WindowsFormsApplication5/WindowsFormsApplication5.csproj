@@ -86,6 +86,22 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="QuickGraph, Version=3.6.61114.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3, processorArchitecture=MSIL">
+      <HintPath>..\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="QuickGraph.Data, Version=3.6.61114.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="QuickGraph.Graphviz, Version=3.6.61114.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3, processorArchitecture=MSIL">
+      <HintPath>..\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.Graphviz.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="QuickGraph.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
@@ -117,17 +133,37 @@
     <Compile Include="Connection.Designer.cs">
       <DependentUpon>Connection.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBase.Designer.cs">
+      <DependentUpon>DataBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data_Form_Line_Graph.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Data_Form_Line_Graph.Designer.cs">
       <DependentUpon>Data_Form_Line_Graph.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Demo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Demo.Designer.cs">
+      <DependentUpon>Demo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest_Flag.cs" />
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History.cs" />
+    <Compile Include="Pie_Chart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pie_Chart.Designer.cs">
+      <DependentUpon>Pie_Chart.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -152,11 +188,20 @@
     <EmbeddedResource Include="Connection.resx">
       <DependentUpon>Connection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DataBase.resx">
+      <DependentUpon>DataBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data_Form_Line_Graph.resx">
       <DependentUpon>Data_Form_Line_Graph.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Demo.resx">
+      <DependentUpon>Demo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pie_Chart.resx">
+      <DependentUpon>Pie_Chart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -173,6 +218,7 @@
     <EmbeddedResource Include="ExcelWorkBook.resx">
       <DependentUpon>ExcelWorkBook.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Connection.datasource" />
     <None Include="Properties\DataSources\ExcelDataReader.CellRange.datasource" />
@@ -194,6 +240,7 @@
     <None Include="Properties\DataSources\ExcelDataReader.Log.Logger.NullLogFactory.datasource" />
     <None Include="Properties\DataSources\ExcelDataReader.Log.LogManager.datasource" />
     <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\History.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\Revenue.datasource" />
     <None Include="Properties\DataSources\Revenue1.datasource" />

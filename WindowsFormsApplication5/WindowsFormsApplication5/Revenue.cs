@@ -9,7 +9,9 @@ namespace WindowsFormsApplication5
     class Revenue
     {
         public int Year { get; set; }
-        public int Month { get; set; }
-        public double Income { get; set; }
+        public int Month { get; set; } 
+        public double Income { get; set; } 
+      
     }
 }
+

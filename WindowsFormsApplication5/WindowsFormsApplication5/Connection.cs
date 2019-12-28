@@ -32,9 +32,14 @@ namespace WindowsFormsApplication5
             LinkLabel.Link link = new LinkLabel.Link();
             link.LinkData = @"Z:\WindowsFormsApplication5\Html_HelpPages\ConnectionFormHelp.html";
             linkLabelOn_Connection.Links.Add(link);
+            LinkLabel.Link linkStatic = new LinkLabel.Link();
+            linkStatic.LinkData = @"Z:\WindowsFormsApplication5\Html_HelpPages\Static_Chart.html";
+            linkLabel_Help_On_Static_Charts.Links.Add(linkStatic);
+            LinkLabel.Link linkRealTime = new LinkLabel.Link();
+            linkRealTime.LinkData = @"Z:\WindowsFormsApplication5\Html_HelpPages\Real_Time_Chart.html";
+            linkLabel_Help_Real_Time_Charts.Links.Add(linkRealTime);
             string videoPath = @"Z:\WindowsFormsApplication5\Html_HelpPages\HtmlLiveChart.html";
             webBrowser1.Navigate(videoPath);
-            label1.Text=webBrowser1.Version.ToString();
             //image list
      
       
@@ -102,7 +107,7 @@ namespace WindowsFormsApplication5
 
         private void linkLabel_Help_Real_Time_Charts_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Process.Start(e.Link.LinkData as string);
         }
 
         private void axShockwaveFlash_Real_Time_Enter(object sender, EventArgs e)
@@ -114,6 +119,47 @@ namespace WindowsFormsApplication5
         {
             Data_Form_Line_Graph opendD_F_L_graph = new Data_Form_Line_Graph();
             opendD_F_L_graph.Show();
+        }
+
+        private void linkLabel_Help_On_Static_Charts_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(e.Link.LinkData as string);
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void labelPieChartheading_Click(object sender, EventArgs e)
+        {
+            Bar_Chart open = new Bar_Chart();
+            open.Show();
+        }
+
+        private void labelBar_Graphheading_Click(object sender, EventArgs e)
+        {
+
+            Pie_Chart open = new Pie_Chart();
+            open.Show();
+        }
+
+        private void pictureBoxPie_Click(object sender, EventArgs e)
+        {
+            Pie_Chart open = new Pie_Chart();
+            open.Show();
+        }
+
+        private void pictureBoxColumn_Click(object sender, EventArgs e)
+        {
+            Bar_Chart open = new Bar_Chart();
+            open.Show();
+        }
+
+        private void buttonDataBase_Click(object sender, EventArgs e)
+        {
+            DataBase open = new DataBase();
+            open.Show();
         }
     }
 }
